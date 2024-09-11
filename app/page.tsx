@@ -2,134 +2,54 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Brain, Code, Zap, Sparkles, Menu } from "lucide-react"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
+// import Link from "next/link" 
+import { Code, Zap, Sparkles, Brain, MessageCircle, Eye, Globe, Star } from "lucide-react"
+
+
+const features = [
+  {
+    id: "ai-development",
+    title: "AI Development",
+    description: "Harness the power of AI to build intelligent, scalable solutions tailored to your business needs.",
+    icon: Brain
+  },
+  {
+    id: "nlp-solutions",
+    title: "NLP Solutions",
+    description: "Extract meaningful insights from text data with our advanced Natural Language Processing solutions.",
+    icon: MessageCircle
+  },
+  {
+    id: "computer-vision",
+    title: "Computer Vision",
+    description: "Leverage cutting-edge computer vision technology to automate and enhance visual data analysis.",
+    icon: Eye
+  },
+  {
+    id: "web-development",
+    title: "Web Development",
+    description: "Build fast, secure, and responsive websites and web applications customized to your business.",
+    icon: Globe
+  },
+  {
+    id: "automations",
+    title: "Automations",
+    description: "Streamline workflows and boost efficiency through smart automation tailored to your processes.",
+    icon: Zap
+  },
+  {
+    id: "recommendation-systems",
+    title: "Recommendation Systems",
+    description: "Offer personalized recommendations to your users using our advanced recommendation engine.",
+    icon: Star
+  }
+]
+
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
-      <header className="px-4 lg:px-6 h-14 flex items-center justify-between border-b border-gray-200 bg-white">
-        <Link className="flex items-center justify-center" href="#">
-          <Brain className="h-6 w-6 text-indigo-600" />
-          <span className="ml-2 text-2xl font-bold text-gray-900">Tech Consulting Partners</span>
-        </Link>
-        <nav className="hidden md:flex items-center ">
-          <Link className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" href="#">
-            Home
-          </Link>
-
-          {/* Dropdown for About */}
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline underline-offset-4 ">
-                  About
-                </NavigationMenuTrigger>
-                <NavigationMenuContent >
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="#about">Our Team</Link>
-                  </NavigationMenuLink>
-                  <br />
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="#history">History</Link>
-                  </NavigationMenuLink>
-                  <br />
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="#vision">Vision</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-
-          {/* Dropdown for Services */}
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline underline-offset-4">
-                  Services
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="#ai-development">AI Development</Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="#nlp-solutions">NLP Solutions</Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="#creative-ai">Creative AI</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-
-            <Link className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 pl-3 pr-4 py-2" href="#why-us">
-              Why Us
-            </Link>
-
-          
-          <Link className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" href="#blog">
-            Blog
-          </Link>
-          <Link className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" href="#careers">
-            Careers
-          </Link>
-          <Link className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" href="#contact">
-            Contact Us
-          </Link>
-        </nav>
-
-        {/* Mobile Menu */}
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem>
-              <Link href="#">Home</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="#about">About</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="#services">Services</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="#why-us">Why Us</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="#blog">Blog</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="#careers">Careers</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="#contact">Contact Us</Link>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </header>
-
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-indigo-600">
+        <section className="w-full py-14 md:py-24 lg:py-32 flex justify-around bg-indigo-600">
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
               <div className="flex flex-col justify-center space-y-4">
@@ -143,8 +63,10 @@ export default function LandingPage() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-indigo-600 hover:bg-indigo-100">Get Started</Button>
-                  <Button variant="outline" className="text-white border-white hover:bg-indigo-700 hover:text-white">
-                    Learn More
+                  <Button variant='outline' className="text-white border-white hover:bg-indigo-700 hover:text-white">
+                    <Link href='/services'>
+                      Our Services
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -161,29 +83,24 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <section id="features" className="w-full py-14 md:py-24 lg:py-32 flex justify-around bg-white">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-gray-900">Our AI Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center text-center">
-                <Code className="h-12 w-12 text-indigo-600 mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-gray-900">AI-Powered Code Generation</h3>
-                <p className="text-gray-600">Generate high-quality code snippets and automate repetitive coding tasks.</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <Zap className="h-12 w-12 text-indigo-600 mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-gray-900">Natural Language Processing</h3>
-                <p className="text-gray-600">Analyze and understand human language for chatbots and content generation.</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <Sparkles className="h-12 w-12 text-indigo-600 mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-gray-900">Creative AI Solutions</h3>
-                <p className="text-gray-600">Generate unique designs, music, and art with our advanced AI models.</p>
-              </div>
+              {features.map((feature) => {
+                const Icon = feature.icon; // Assign the icon component dynamically
+                return (
+                  <div key={feature.id} className="flex flex-col items-center text-center">
+                    <Icon className="h-12 w-12 text-indigo-600 mb-4" /> {/* Dynamically render the icon */}
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">{feature.title}</h3>
+                    <p className="text-gray-600">{feature.description}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
-        <section id="cta" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+        <section id="cta" className="w-full py-12 md:py-24 lg:py-32 flex justify-around bg-gray-100">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -216,18 +133,5 @@ export default function LandingPage() {
           </div>
         </section>
       </main>
-
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-200 bg-white">
-        <p className="text-xs text-gray-600">© 2023 AI Innovate. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs text-gray-600 hover:text-indigo-600 hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs text-gray-600 hover:text-indigo-600 hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-        </nav>
-      </footer>
-    </div>
   )
 }
