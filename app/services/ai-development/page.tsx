@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Cpu, Database, Network, Zap, BarChart, Bot, Code, Calendar, Cloud, Layers, Server, FileText, TrendingUp } from "lucide-react";
+import { Brain, Cpu, Database, Network, Zap, BarChart, Bot, Code, Calendar, Layers, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
 
@@ -12,7 +12,7 @@ const AIDevelopment = () => {
           <Brain className="h-20 w-20 text-indigo-300 mx-auto mb-6" />
           <h1 className="text-5xl font-bold mb-4">AI Development Services</h1>
           <p className="text-xl text-indigo-200 mb-8 max-w-2xl mx-auto">
-            We're not just building AI - we're crafting the future of your business. Let's transform your ideas into intelligent, scalable solutions.
+            We&apos;re not just building AI - we&apos;re crafting the future of your business. Let&apos;s transform your ideas into intelligent, scalable solutions.
           </p>
         </div>
       </section>
@@ -106,7 +106,7 @@ const AIDevelopment = () => {
             <Calendar className="h-16 w-16 text-indigo-600 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Lead with AI?</h2>
             <p className="text-xl text-gray-600 mb-6">
-              Let's chat about your vision. Our AI experts are ready to show you how we can turn your challenges into opportunities for innovation and growth.
+              Let&apos;s chat about your vision. Our AI experts are ready to show you how we can turn your challenges into opportunities for innovation and growth.
             </p>
             <Button size="lg" className="bg-indigo-600 text-white hover:bg-indigo-700">
               Schedule a consultation

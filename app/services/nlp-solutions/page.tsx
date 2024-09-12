@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, Mic, Bot, Cpu, BarChart, Code, Calendar, Cloud, Layers, Server, FileText, ThumbsUp } from "lucide-react";
+import { MessageSquare, Mic, Bot, Cpu, BarChart, Code, Calendar, Cloud, Layers, FileText, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
 
@@ -106,7 +106,7 @@ const NLPDevelopment = () => {
             <Calendar className="h-16 w-16 text-indigo-600 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Innovate with NLP?</h2>
             <p className="text-xl text-gray-600 mb-6">
-              Let's explore how NLP can transform your business. Our experts are ready to craft intelligent language solutions tailored to your needs.
+              Let&apos;s explore how NLP can transform your business. Our experts are ready to craft intelligent language solutions tailored to your needs.
             </p>
             <Button size="lg" className="bg-indigo-600 text-white hover:bg-indigo-700">
               Schedule a consultation

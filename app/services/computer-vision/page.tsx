@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, Camera, Scan, Image, Layers, Cpu, BarChart, Video, Calendar, Cloud, Search, Shield, Heart, Factory } from "lucide-react";
+import { Eye, Camera, Scan, Image, Layers, Cpu, BarChart, Video, Calendar, Search, Heart, Factory } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
 
@@ -106,7 +106,7 @@ const ComputerVisionServices = () => {
             <Calendar className="h-16 w-16 text-indigo-600 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Unlock the Power of Visual Data?</h2>
             <p className="text-xl text-gray-600 mb-6">
-              Let's explore how our advanced computer vision solutions can transform your business, enhance decision-making, and drive innovation across industries.
+              Let&apos;s explore how our advanced computer vision solutions can transform your business, enhance decision-making, and drive innovation across industries.
             </p>
             <Button size="lg" className="bg-indigo-600 text-white hover:bg-indigo-700">
               Schedule a consultation

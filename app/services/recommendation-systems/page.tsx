@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Cpu, BarChart, Code, Calendar, Cloud, Database, Layers,  Bot, Image, Factory, Heart } from "lucide-react";
+import { Brain, Cpu, BarChart, Code, Calendar, Cloud, Database, Layers,  Bot, Factory, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
 
@@ -12,7 +12,7 @@ const RecommendationSystems = () => {
           <BarChart className="h-20 w-20 text-indigo-300 mx-auto mb-6" />
           <h1 className="text-5xl font-bold mb-4">Recommendation System</h1>
           <p className="text-xl text-indigo-200 mb-8 max-w-2xl mx-auto">
-            Deliver personalized experiences with state-of-the-art recommendation systems that adapt and learn from your customers' preferences.
+            Deliver personalized experiences with state-of-the-art recommendation systems that adapt and learn from your customers&apos; preferences.
           </p>
         </div>
       </section>
@@ -102,7 +102,7 @@ const RecommendationSystems = () => {
             <Calendar className="h-16 w-16 text-indigo-600 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Personalize with AI?</h2>
             <p className="text-xl text-gray-600 mb-6">
-              Let's discuss how a recommendation system can transform your business. Our AI experts are ready to tailor solutions to your unique needs.
+              Let&apos;s discuss how a recommendation system can transform your business. Our AI experts are ready to tailor solutions to your unique needs.
             </p>
             <Button size="lg" className="bg-indigo-600 text-white hover:bg-indigo-700">
               Schedule a consultation

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Code, Smartphone, Zap, Layout, Server, Shield, Cloud, Layers, Database, Repeat, Calendar, Bot, Cpu } from "lucide-react";
+import { Globe, Code, Zap, Layout, Server, Shield, Layers, Database, Repeat, Calendar, Bot, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
 
@@ -75,7 +75,7 @@ const WebDevelopmentServices = () => {
 
         {/* Technologies & Tools */}
         <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-indigo-600 mb-8">Use cases and Applications</h2>
+          <h2 className="text-5xl text-center font-semibold text-indigo-600 mb-8">Use cases & Applications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Layers className="h-8 w-8 text-indigo-600" />}
@@ -106,7 +106,7 @@ const WebDevelopmentServices = () => {
             <Calendar className="h-16 w-16 text-indigo-600 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Elevate Your Web Presence?</h2>
             <p className="text-xl text-gray-600 mb-6">
-              Let's discuss how our web development expertise can help you create impactful, high-performing digital experiences enhanced with cutting-edge AI capabilities.
+              Let&apos;s discuss how our web development expertise can help you create impactful, high-performing digital experiences enhanced with cutting-edge AI capabilities.
             </p>
             <Button size="lg" className="bg-indigo-600 text-white hover:bg-indigo-700">
               Schedule a consultation

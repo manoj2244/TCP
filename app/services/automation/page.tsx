@@ -106,7 +106,7 @@ const AutomationServices = () => {
             <Calendar className="h-16 w-16 text-indigo-600 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Automate Your Success?</h2>
             <p className="text-xl text-gray-600 mb-6">
-              Let's discuss how our automation solutions can transform your business operations, boost efficiency, and drive growth.
+              Let&apos;s discuss how our automation solutions can transform your business operations, boost efficiency, and drive growth.
             </p>
             <Button size="lg" className="bg-indigo-600 text-white hover:bg-indigo-700">
               Schedule a consultation
