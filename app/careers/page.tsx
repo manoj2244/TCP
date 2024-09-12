@@ -51,13 +51,13 @@ const benefits = [
 export default function CareersPage() {
   return (
     <main className="flex-1">
-      <section className="w-full py-14 md:py-24 lg:py-32 bg-gray-100">
+      <section className="w-full py-14 md:py-24 lg:py-32 bg-indigo-600">
         <div className="container px-4 md:px-6">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-gray-900">
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-White">
             Join Our Team
           </h1>
           <div className="text-center max-w-2xl mx-auto">
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-indigo-200">
               At Tech Consulting Partners, we’re always looking for passionate and talented people to help us build innovative AI solutions. Explore our open positions and become part of a forward-thinking team.
             </p>
           </div>

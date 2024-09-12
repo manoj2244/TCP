@@ -1,5 +1,12 @@
 import { Brain, MessageCircle, Eye, Globe, Zap, Star } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Services | Tech Consulting Partners',
+  description:"Services offered by Tech Consulting Partners."
+}
 
 const services = [
   {
@@ -63,6 +70,9 @@ const Services = () => {
                   </CardHeader>
                   <CardContent className="px-6">
                     <p className="text-gray-600 text-center">{service.description}</p>
+                  </CardContent>
+                  <CardContent className="px-6 text-center">
+                    <Link href='/${service.id}' className="text-indigo-600 underline">More details</Link>
                   </CardContent>
                 </Card>
               )

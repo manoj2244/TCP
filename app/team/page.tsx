@@ -16,15 +16,27 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: 'John Doe',
-    role: 'CEO',
-    bio: 'John is the visionary behind our startup with over 10 years of experience in the tech industry.',
+    name: 'Subramani Sivakumar',
+    role: 'Founder',
+    bio: 'Subramani is the visionary behind our startup with over 10 years of experience in the tech industry.',
     image: '/team/john_doe.jpg'
   },
   {
-    name: 'Jane Smith',
-    role: 'CTO',
-    bio: 'Jane leads our technology development with a passion for innovation and a strong background in software engineering.',
+    name: 'Rauhan Ahmed Siddiqui',
+    role: 'AI Engineer',
+    bio: 'Rauhan leads our AI development with a passion for innovation and a strong background in Data Science.',
+    image: '/team/jane_smith.jpg'
+  },
+  {
+    name: 'Ishwor Subedi',
+    role: 'AI Engineer',
+    bio: 'Ishwor leads our Computer Vision development with a passion for innovation and a strong background in Machine Learning.',
+    image: '/team/jane_smith.jpg'
+  },
+  {
+    name: 'Syed Mohammed Faham',
+    role: 'Full-stack Developer',
+    bio: 'Faham leads our Frontend development with a passion for innovation and a strong background in Software Engineering.',
     image: '/team/jane_smith.jpg'
   },
 ];

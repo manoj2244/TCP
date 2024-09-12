@@ -40,9 +40,9 @@ const Navbar = () => {
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                   <Link href="/team">Our Team</Link>
                 </NavigationMenuLink>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                {/* <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                   <Link href="/history">History</Link>
-                </NavigationMenuLink>
+                </NavigationMenuLink> */}
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                   <Link href="/vision">Vision</Link>
                 </NavigationMenuLink>
@@ -60,22 +60,22 @@ const Navbar = () => {
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="#ai-development">AI Development</Link>
+                  <Link href="/services/ai-development">AI Development</Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="#nlp-solutions">NLP Solutions</Link>
+                  <Link href="/services/nlp-solutions">NLP Solutions</Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="#creative-ai">Computer Vision</Link>
+                  <Link href="/services/computer-vision">Computer Vision</Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="#creative-ai">Web Development</Link>
+                  <Link href="/services/web-development">Web Development</Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="#creative-ai">Automations</Link>
+                  <Link href="/services/automation">Automations</Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="#creative-ai">Recommendation Systems</Link>
+                  <Link href="/services/recommendation-systems">Recommendation Systems</Link>
                 </NavigationMenuLink>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -85,13 +85,13 @@ const Navbar = () => {
         <Link href="/why-us" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 pl-3 pr-4 py-2">
           Why Us
         </Link>
-        <Link className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" href="#blog">
+        <Link  href="/blogs" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" >
           Blog
         </Link>
-        <Link className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" href="#careers">
+        <Link href="/careers" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Careers
         </Link>
-        <Link className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" href="#contact">
+        <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Contact Us
         </Link>
       </nav>
