@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 // import Link from "next/link" 
-import { Code, Zap, Sparkles, Brain, MessageCircle, Eye, Globe, Star } from "lucide-react"
+import { Zap, Brain, MessageCircle, Eye, Globe, Star } from "lucide-react"
 
 
 const features = [

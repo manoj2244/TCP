@@ -1,7 +1,8 @@
 import React from 'react';
 import { Shield, Settings, Award, Star } from 'lucide-react';
 import type { Metadata } from 'next'
- 
+import Image from 'next/image'; 
+
 export const metadata: Metadata = {
   title: 'Why Us? | Tech Consulting Partners',
   description:"When to choose Tech Consulting Partners."
@@ -59,10 +60,12 @@ const WhyUsPage: React.FC = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <img
+              <Image
                 src="/placeholder-why-us.svg"
                 alt="Why Choose Us"
                 className="w-full max-w-lg rounded-lg object-cover"
+                width={400}
+                height={400}
               />
             </div>
           </div>
