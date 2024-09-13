@@ -2,6 +2,7 @@ import React from 'react';
 import { Brain, Cpu, Database, Network, Zap, BarChart, Bot, Code, Calendar, Layers, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
+import Link from 'next/link';
 
 const AIDevelopment = () => {
   return (
@@ -109,7 +110,7 @@ const AIDevelopment = () => {
               Let&apos;s chat about your vision. Our AI experts are ready to show you how we can turn your challenges into opportunities for innovation and growth.
             </p>
             <Button size="lg" className="bg-indigo-600 text-white hover:bg-indigo-700">
-              Schedule a consultation
+              <Link href='/contact'>Schedule a consultation</Link>
             </Button>
           </div>
         </section>

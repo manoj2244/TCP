@@ -19,32 +19,32 @@ const teamMembers: TeamMember[] = [
     name: 'Subramani Sivakumar',
     role: 'Founder',
     bio: 'Subramani is the visionary behind our startup with over 10 years of experience in the tech industry.',
-    image: '/team/john_doe.jpg'
+    image: '/team/subramani.png'
   },
   {
     name: 'Rauhan Ahmed Siddiqui',
     role: 'AI Engineer',
     bio: 'Rauhan leads our AI development with a passion for innovation and a strong background in Data Science.',
-    image: '/team/jane_smith.jpg'
+    image: '/team/rauhan.png'
   },
   {
     name: 'Ishwor Subedi',
     role: 'AI Engineer',
     bio: 'Ishwor leads our Computer Vision development with a passion for innovation and a strong background in Machine Learning.',
-    image: '/team/jane_smith.jpg'
+    image: '/team/ishwor.png'
   },
   {
     name: 'Syed Mohammed Faham',
     role: 'Full-stack Developer',
     bio: 'Faham leads our Frontend development with a passion for innovation and a strong background in Software Engineering.',
-    image: '/team/jane_smith.jpg'
+    image: '/team/faham.png'
   },
 ];
 
 const TeamPage: React.FC = () => {
   return (
       <main className="flex-1">
-        <section id="team" className="w-full h-screen py-6 md:py-10 lg:py-16 bg-white flex justify-around">
+        <section id="team" className="w-full h-full py-6 md:py-10 lg:py-16 bg-white flex justify-around">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-gray-900">Meet Our Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

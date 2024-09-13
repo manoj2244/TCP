@@ -2,6 +2,7 @@ import React from 'react';
 import { MessageSquare, Mic, Bot, Cpu, BarChart, Code, Calendar, Cloud, Layers, FileText, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
+import Link from 'next/link';
 
 const NLPDevelopment = () => {
   return (
@@ -109,7 +110,7 @@ const NLPDevelopment = () => {
               Let&apos;s explore how NLP can transform your business. Our experts are ready to craft intelligent language solutions tailored to your needs.
             </p>
             <Button size="lg" className="bg-indigo-600 text-white hover:bg-indigo-700">
-              Schedule a consultation
+              <Link href='/contact'>Schedule a consultation</Link>
             </Button>
           </div>
         </section>

@@ -2,7 +2,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-// import Link from "next/link" 
 import { Zap, Brain, MessageCircle, Eye, Globe, Star } from "lucide-react"
 
 
@@ -70,12 +69,12 @@ export default function LandingPage() {
                   </Button>
                 </div>
               </div>
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex justify-center lg:justify-around">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/home.png"
                   alt="AI-powered solutions"
-                  width={400}
-                  height={400}
+                  width={450}
+                  height={450}
                   className="rounded-lg object-cover"
                   priority
                 />

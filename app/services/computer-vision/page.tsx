@@ -2,6 +2,7 @@ import React from 'react';
 import { Eye, Camera, Scan, Image, Layers, Cpu, BarChart, Video, Calendar, Search, Heart, Factory } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
+import Link from 'next/link';
 
 const ComputerVisionServices = () => {
   return (
@@ -109,7 +110,7 @@ const ComputerVisionServices = () => {
               Let&apos;s explore how our advanced computer vision solutions can transform your business, enhance decision-making, and drive innovation across industries.
             </p>
             <Button size="lg" className="bg-indigo-600 text-white hover:bg-indigo-700">
-              Schedule a consultation
+              <Link href='/contact'>Schedule a consultation</Link>
             </Button>
           </div>
         </section>

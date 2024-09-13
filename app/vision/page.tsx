@@ -24,7 +24,7 @@ const VisionPage: React.FC = () => {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="/placeholder-vision.svg"
+                  src="/vision-2.png"
                   alt="Vision"
                   width={500}
                   height={300}

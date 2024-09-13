@@ -72,7 +72,7 @@ const Services = () => {
                     <p className="text-gray-600 text-center">{service.description}</p>
                   </CardContent>
                   <CardContent className="px-6 text-center">
-                    <Link href='/${service.id}' className="text-indigo-600 underline">More details</Link>
+                    <Link href={`/services/${service.id}`} className="text-indigo-600 underline">More details</Link>
                   </CardContent>
                 </Card>
               )

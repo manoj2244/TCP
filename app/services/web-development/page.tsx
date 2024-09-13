@@ -2,6 +2,7 @@ import React from 'react';
 import { Globe, Code, Zap, Layout, Server, Shield, Layers, Database, Repeat, Calendar, Bot, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
+import Link from 'next/link';
 
 const WebDevelopmentServices = () => {
   return (
@@ -109,7 +110,7 @@ const WebDevelopmentServices = () => {
               Let&apos;s discuss how our web development expertise can help you create impactful, high-performing digital experiences enhanced with cutting-edge AI capabilities.
             </p>
             <Button size="lg" className="bg-indigo-600 text-white hover:bg-indigo-700">
-              Schedule a consultation
+              <Link href='/contact'>Schedule a consultation</Link>
             </Button>
           </div>
         </section>
