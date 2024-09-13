@@ -13,7 +13,7 @@ const jobOpenings = [
     id: "ml-engineer",
     title: "Machine Learning Engineer",
     description: "Design and implement machine learning algorithms for NLP and computer vision. Experience with deep learning frameworks is a must.",
-    location: "San Francisco, CA",
+    location: "Remote",
     type: "Full-time"
   },
   {

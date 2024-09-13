@@ -61,7 +61,7 @@ const WhyUsPage: React.FC = () => {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/placeholder-why-us.svg"
+                src="/why-us.png"
                 alt="Why Choose Us"
                 className="w-full max-w-lg rounded-lg object-cover"
                 width={400}
