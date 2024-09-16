@@ -91,7 +91,7 @@ const Navbar = () => {
         <Link href="/careers" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Careers
         </Link>
-        <Link href="https://calendly.com/techconsulting444/30min" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
+        <Link href="https://calendly.com/techconsultingpartners/30min" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Contact Us
         </Link>
       </nav>
@@ -124,7 +124,7 @@ const Navbar = () => {
             <Link href="/careers">Careers</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="https://calendly.com/techconsulting444/30min">Contact Us</Link>
+            <Link href="https://calendly.com/techconsultingpartners/30min">Contact Us</Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
