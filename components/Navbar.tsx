@@ -14,8 +14,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
   return (
@@ -91,7 +91,7 @@ const Navbar = () => {
         <Link href="/careers" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Careers
         </Link>
-        <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
+        <Link href="https://calendly.com/techconsulting444/30min" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Contact Us
         </Link>
       </nav>
@@ -109,22 +109,22 @@ const Navbar = () => {
             <Link href="/">Home</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="#about">About</Link>
+            <Link href="/about">About</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="#services">Services</Link>
+            <Link href="/services">Services</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Link href="/why-us">Why Us</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="#blog">Blog</Link>
+            <Link href="/blog">Blog</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="#careers">Careers</Link>
+            <Link href="/careers">Careers</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="#contact">Contact Us</Link>
+            <Link href="https://calendly.com/techconsulting444/30min">Contact Us</Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

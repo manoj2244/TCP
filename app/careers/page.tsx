@@ -1,5 +1,11 @@
 import { Briefcase, Smile, Users, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Careeers | Tech Consulting Partners',
+  description:"Job openings by Tech Consulting Partners."
+}
 
 const jobOpenings = [
   {

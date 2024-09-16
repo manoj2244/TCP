@@ -1,5 +1,12 @@
 import React from 'react';
 import { ContactForm } from '@/components/ContactForm';
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Contact | Tech Consulting Partners',
+  description:"Contact Tech Consulting Partners."
+}
+
 
 const ContactPage = () => {
   return (
