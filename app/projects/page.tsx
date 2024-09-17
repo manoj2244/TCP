@@ -18,7 +18,7 @@ const projects = [
     solutions: 'Implemented Groq inference to streamline chatbot responses and enhance processing speed.',
     visuals: '/conversai.png',
     impact: 'Enabled companies to easily integrate customizable AI chatbots on their websites.',
-    liveLink: 'https://convers-ai-test.vercell.app',
+    liveLink: 'https://convers-ai-test.vercel.app',
   },
   {
     title: 'Magical Mirror',
