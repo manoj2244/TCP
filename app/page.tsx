@@ -111,22 +111,18 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <form className="flex space-x-2">
-                  <Input
-                    className="max-w-lg flex-1"
-                    placeholder="Enter your email"
-                    type="email"
-                    required
-                  />
-                  <Button type="submit" className="bg-indigo-600 text-white hover:bg-indigo-700">Subscribe</Button>
-                </form>
-                <p className="text-xs text-gray-600">
+                  <Button type="submit" className="bg-indigo-600 text-white hover:bg-indigo-700">
+                    <Link href='https://calendly.com/techconsultingpartners/30min'>
+                      Get in touch
+                    </Link>
+                  </Button>
+                {/* <p className="text-xs text-gray-600">
                   By subscribing, you agree to our{" "}
                   <Link className="underline underline-offset-2 hover:text-indigo-600" href="#">
                     Terms & Conditions
                   </Link>
                   .
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

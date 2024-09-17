@@ -85,7 +85,10 @@ const Navbar = () => {
         <Link href="/why-us" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 pl-3 pr-4 py-2">
           Why Us
         </Link>
-        <Link  href="/blogs" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" >
+        <Link href="/projects" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 pl-3 pr-4 py-2">
+          Our Work
+        </Link>
+        <Link href="/blogs" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" >
           Blog
         </Link>
         <Link href="/careers" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
@@ -116,6 +119,9 @@ const Navbar = () => {
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Link href="/why-us">Why Us</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/projects">Our Work</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Link href="/blog">Blog</Link>
