@@ -53,7 +53,7 @@ const projects = [
 const ProjectsPage = () => {
   return (
     <div className="container mx-auto py-10 px-5 text-black">
-      <h1 className="sm:text-5xl font-bold text-center mb-10 text-indigo-600">Our Projects</h1>
+      <h1 className="sm:text-5xl font-bold text-center mb-10 text-black">Our Projects</h1>
       <p className="text-lg text-center mb-12">
         Explore the cutting-edge solutions we&apos;ve delivered for our clients, spanning AI, NLP, and Computer Vision.
       </p>
