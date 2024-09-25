@@ -8,21 +8,23 @@ const AIDevelopment = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
-      <section className="bg-logo-600 text-white py-5">
-        <div className="container mx-auto px-4 text-center">
-          <Brain className="h-20 w-20 text-blue-300 mx-auto mb-6" />
-          <h1 className="text-5xl font-bold mb-4">AI Development Services</h1>
-          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-            We&apos;re not just building AI - we&apos;re crafting the future of your business. Let&apos;s transform your ideas into intelligent, scalable solutions.
-          </p>
+      <section className="bg-logo-600 text-white pb-3 pt-6">
+        <div className="container mx-auto px-4 flex justify-center">
+          <Brain className="h-12 w-12 text-blue-300 mr-2" />
+          <div>
+            <h1 className="text-5xl font-bold mb-2 text-center">AI Development Services</h1>
+            <p className="text-xl text-blue-200 mb-4 max-w-2xl text-center">
+              We&apos;re not just building AI - we&apos;re crafting the future of your business. <br />Let&apos;s transform your ideas into intelligent, scalable solutions.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-8">
         {/* Our AI Expertise */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Our AI Expertise</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Our AI Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Cpu className="h-8 w-8 text-logo-600" />}
@@ -48,8 +50,8 @@ const AIDevelopment = () => {
         </section>
 
         {/* AI Solutions Tailored for You */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">AI Solutions Tailored for You</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">AI Solutions Tailored for You</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Bot className="h-8 w-8 text-logo-600" />}
@@ -75,8 +77,8 @@ const AIDevelopment = () => {
         </section>
 
         {/* Use Cases & Technologies */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Use Cases & Technologies</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Use Cases & Technologies</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Layers className="h-8 w-8 text-logo-600" />}

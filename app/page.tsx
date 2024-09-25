@@ -43,47 +43,46 @@ const features = [
   }
 ]
 
-
 export default function LandingPage() {
   return (
       <main className="flex-1">
-        <section className="w-full py-14 md:py-24 lg:py-32 flex justify-around bg-logo-600">
+        <section className="w-full py-4 md:py-6 lg:py-8 flex justify-around bg-logo-600">
           <div className="container px-4 md:px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-              <div className="flex flex-col justify-center space-y-4">
+           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">  {/* lg:grid-cols-3 */}
+               <div className="flex flex-col justify-center space-y-4">   {/*  col-span-2 */}
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
+                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
                     Revolutionize Your Business with AI
                   </h1>
                   <p className="max-w-[600px] text-blue-100 md:text-xl">
                     Harness the power of Generative AI to transform your products, services, and customer experiences.
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4">
+                {/* <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-logo-600 hover:bg-blue-100">Get Started</Button>
-                  <Button variant='outline' className="text-white border-white hover:bg-logo-600 hover:text-white">
+                  <Button variant='outline' className="text-white border-white hover:bg-blue-900/20 hover:text-white">
                     <Link href='/services'>
                       Our Services
                     </Link>
                   </Button>
-                </div>
+                </div> */}
               </div>
-              <div className="flex justify-center lg:justify-around">
-                <Image
+              <div className=" flex justify-center">
+                {/* <Image
                   src="/home.png"
                   alt="AI-powered solutions"
-                  width={450}
-                  height={450}
+                  width={300}
+                  height={300}
                   className="rounded-lg object-cover"
                   priority
-                />
+                /> */}
               </div>
             </div>
           </div>
         </section>
-        <section id="features" className="w-full py-14 md:py-24 lg:py-32 flex justify-around bg-white">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-gray-900">Our AI Solutions</h2>
+        <section id="features" className="w-full py-4 md:py-6 lg:py-8 flex justify-around bg-white">
+          <div className="container px-4 md:px-6 mx-10">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-gray-900">Our AI Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature) => {
                 const Icon = feature.icon; // Assign the icon component dynamically
@@ -98,7 +97,7 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-        <section id="cta" className="w-full py-12 md:py-24 lg:py-32 flex justify-around bg-gray-100">
+        <section id="cta" className="w-full py-4 md:py-6 lg:py-8 flex justify-around bg-gray-100">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -110,7 +109,7 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                  <Button type="submit" className="bg-logo-600 text-white hover:bg-logo-600">
+                  <Button type="submit" className="bg-logo-600 text-white hover:bg-blue-600/80">
                     <Link href='https://calendly.com/techconsultingpartners/30min'>
                       Get in touch
                     </Link>

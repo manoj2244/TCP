@@ -8,21 +8,23 @@ const WebDevelopmentServices = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
       {/* Hero Section */}
-      <section className="bg-logo-600 text-white py-5">
-        <div className="container mx-auto px-4 text-center">
-          <Globe className="h-20 w-20 text-blue-300 mx-auto mb-6" />
-          <h1 className="text-5xl font-bold mb-4">Web Development Services</h1>
-          <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
-            Transform your digital presence with our cutting-edge web development solutions. From responsive interfaces to AI-powered web applications, we bring vision to life.
-          </p>
+      <section className="bg-logo-600 text-white pb-3 pt-6">
+        <div className="container mx-auto px-4 flex justify-center">
+          <Globe className="h-12 w-12 text-blue-300 mr-2" />
+          <div>
+            <h1 className="text-5xl font-bold mb-2 text-center">Web Development Services</h1>
+            <p className="text-xl text-blue-200 mb-4 max-w-3xl text-center">
+              Transform your digital presence with our cutting-edge web development solutions. From responsive interfaces to AI-powered web applications, we bring vision to life.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-8">
         {/* Our Web Development Expertise */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Our Web Development Expertise</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Our Web Development Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Layout className="h-8 w-8 text-logo-600" />}
@@ -48,8 +50,8 @@ const WebDevelopmentServices = () => {
         </section>
 
         {/* Web Development Solutions */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Web Development Solutions</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Web Development Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Zap className="h-8 w-8 text-logo-600" />}
@@ -75,8 +77,8 @@ const WebDevelopmentServices = () => {
         </section>
 
         {/* Technologies & Tools */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Use cases & Applications</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Use cases & Applications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Layers className="h-8 w-8 text-logo-600" />}

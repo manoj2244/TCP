@@ -8,21 +8,23 @@ const RecommendationSystems = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
-      <section className="bg-logo-600 text-white py-5">
-        <div className="container mx-auto px-4 text-center">
-          <BarChart className="h-20 w-20 text-blue-300 mx-auto mb-6" />
-          <h1 className="text-5xl font-bold mb-4">Recommendation System</h1>
-          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-            Deliver personalized experiences with state-of-the-art recommendation systems that adapt and learn from your customers&apos; preferences.
-          </p>
+      <section className="bg-logo-600 text-white pb-3 pt-6">
+        <div className="container mx-auto px-4 flex justify-center">
+          <BarChart className="h-12 w-12 text-blue-300 " />
+          <div>
+            <h1 className="text-5xl font-bold mb-2 text-center">Recommendation System</h1>
+            <p className="text-xl text-blue-200 mb-4 max-w-2xl mx-auto text-center">
+              Deliver personalized experiences with state-of-the-art recommendation systems that adapt and learn from your customers&apos; preferences.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-8">
         {/* Our Recommendation System Expertise */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Our Expertise in Recommendation Systems</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Our Expertise in Recommendation Systems</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Brain className="h-8 w-8 text-logo-600" />}
@@ -48,8 +50,8 @@ const RecommendationSystems = () => {
         </section>
 
         {/* Recommendation System Solutions Tailored for You */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Tailored Recommendation System Solutions</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Tailored Recommendation System Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Code className="h-8 w-8 text-logo-600" />}
@@ -76,8 +78,8 @@ const RecommendationSystems = () => {
 
 
         {/* Technologies & Applications */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Use Cases & Applications</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Use Cases & Applications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Heart className="h-8 w-8 text-logo-600" />}

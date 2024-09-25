@@ -8,21 +8,23 @@ const ComputerVisionServices = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
       {/* Hero Section */}
-      <section className="bg-logo-600 text-white py-5">
-        <div className="container mx-auto px-4 text-center">
-          <Eye className="h-20 w-20 text-blue-300 mx-auto mb-6" />
-          <h1 className="text-5xl font-bold mb-4">Computer Vision Services</h1>
-          <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
-            Empower your business with cutting-edge computer vision solutions. From image recognition to real-time video analysis, we bring your visual data to life.
-          </p>
+      <section className="bg-logo-600 text-white pb-3 pt-6">
+      <div className="container mx-auto flex justify-center">
+          <Eye className="h-12 w-12 text-blue-300 mr-2" />
+          <div>
+            <h1 className="text-5xl font-bold mb-2 text-center">Computer Vision Services</h1>
+            <p className="text-xl text-blue-200 mb-4 max-w-3xl text-center">
+              Empower your business with cutting-edge computer vision solutions. <br />From image recognition to real-time video analysis, we bring your visual data to life.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-8">
         {/* Our Computer Vision Expertise */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Our Computer Vision Expertise</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Our Computer Vision Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Image2 className="h-8 w-8 text-logo-600"/>}
@@ -48,8 +50,8 @@ const ComputerVisionServices = () => {
         </section>
 
         {/* Computer Vision Solutions */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Computer Vision Solutions</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Computer Vision Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Camera className="h-8 w-8 text-logo-600" />}
@@ -75,8 +77,8 @@ const ComputerVisionServices = () => {
         </section>
 
         {/* Technologies & Applications */}
-        <section className="mb-20">
-          <h2 className="text-5xl text-center font-semibold text-logo-600 mb-8">Use Cases & Applications</h2>
+        <section className="mb-10">
+          <h2 className="text-4xl text-center font-semibold text-logo-600 mb-8">Use Cases & Applications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceItem
               icon={<Layers className="h-8 w-8 text-logo-600" />}
