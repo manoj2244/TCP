@@ -40,7 +40,7 @@ const ComputerVisionServices = () => {
               description="Precisely segment images into different regions, enabling detailed analysis and understanding of complex scenes."
             />
             <ServiceItem
-              icon={<Cpu className="h-8 w-8 text-logo-600" />}
+              icon={ <Cpu className="h-8 w-8 text-logo-600" /> }
               title="Deep Learning for Vision"
               description="Leverage cutting-edge neural network architectures to solve complex visual recognition and analysis tasks."
             />
