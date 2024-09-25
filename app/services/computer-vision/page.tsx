@@ -6,13 +6,13 @@ import Link from 'next/link';
 
 const ComputerVisionServices = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-logo-50 to-logo-100">
+    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
       {/* Hero Section */}
-      <section className="bg-logo-700 text-white py-20">
+      <section className="bg-logo-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <Eye className="h-20 w-20 text-logo-300 mx-auto mb-6" />
+          <Eye className="h-20 w-20 text-blue-300 mx-auto mb-6" />
           <h1 className="text-5xl font-bold mb-4">Computer Vision Services</h1>
-          <p className="text-xl text-logo-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
             Empower your business with cutting-edge computer vision solutions. From image recognition to real-time video analysis, we bring your visual data to life.
           </p>
         </div>
@@ -109,7 +109,7 @@ const ComputerVisionServices = () => {
             <p className="text-xl text-gray-600 mb-6">
               Let&apos;s explore how our advanced computer vision solutions can transform your business, enhance decision-making, and drive innovation across industries.
             </p>
-            <Button size="lg" className="bg-logo-600 text-white hover:bg-logo-700">
+            <Button size="lg" className="bg-logo-600 text-white hover:bg-logo-600">
               <Link href='/contact'>Schedule a consultation</Link>
             </Button>
           </div>

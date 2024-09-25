@@ -100,7 +100,7 @@ const ProjectsPage = () => {
 
                 {/* Live Project Link */}
                 <div className="mt-6">
-                  <Button className="bg-logo-600 text-white hover:bg-logo-700">
+                  <Button className="bg-logo-600 text-white hover:bg-logo-600">
                     <Link href={project.liveLink} target="_blank">
                       View Live Project
                     </Link>
@@ -132,7 +132,7 @@ const ProjectsPage = () => {
               </p>
             </div>
             <div className="w-full max-w-sm space-y-2">
-              <Button type="submit" className="bg-logo-600 text-white hover:bg-logo-700">
+              <Button type="submit" className="bg-logo-600 text-white hover:bg-logo-600">
                 <Link href='https://calendly.com/techconsultingpartners/30min'>
                   Get in touch
                 </Link>

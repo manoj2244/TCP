@@ -6,13 +6,13 @@ import Link from 'next/link';
 
 const AutomationServices = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-logo-50 to-logo-100">
+    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
       {/* Hero Section */}
-      <section className="bg-logo-700 text-white py-20">
+      <section className="bg-logo-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <Bot className="h-20 w-20 text-logo-300 mx-auto mb-6" />
+          <Bot className="h-20 w-20 text-blue-300 mx-auto mb-6" />
           <h1 className="text-5xl font-bold mb-4">Automation Services</h1>
-          <p className="text-xl text-logo-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
             Streamline your operations, boost productivity, and unlock new efficiencies with our cutting-edge automation solutions.
           </p>
         </div>
@@ -109,7 +109,7 @@ const AutomationServices = () => {
             <p className="text-xl text-gray-600 mb-6">
               Let&apos;s discuss how our automation solutions can transform your business operations, boost efficiency, and drive growth.
             </p>
-            <Button size="lg" className="bg-logo-600 text-white hover:bg-logo-700">
+            <Button size="lg" className="bg-logo-600 text-white hover:bg-logo-600">
               <Link href='/contact'>Schedule a consultation</Link>
             </Button>
           </div>

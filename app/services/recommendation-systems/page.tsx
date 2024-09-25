@@ -8,11 +8,11 @@ const RecommendationSystems = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
-      <section className="bg-logo-700 text-white py-20">
+      <section className="bg-logo-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <BarChart className="h-20 w-20 text-logo-300 mx-auto mb-6" />
+          <BarChart className="h-20 w-20 text-blue-300 mx-auto mb-6" />
           <h1 className="text-5xl font-bold mb-4">Recommendation System</h1>
-          <p className="text-xl text-logo-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
             Deliver personalized experiences with state-of-the-art recommendation systems that adapt and learn from your customers&apos; preferences.
           </p>
         </div>
@@ -105,7 +105,7 @@ const RecommendationSystems = () => {
             <p className="text-xl text-gray-600 mb-6">
               Let&apos;s discuss how a recommendation system can transform your business. Our AI experts are ready to tailor solutions to your unique needs.
             </p>
-            <Button size="lg" className="bg-logo-600 text-white hover:bg-logo-700">
+            <Button size="lg" className="bg-logo-600 text-white hover:bg-logo-600">
               <Link href='/contact'>Schedule a consultation</Link>
             </Button>
           </div>

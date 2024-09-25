@@ -55,13 +55,13 @@ export default function LandingPage() {
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
                     Revolutionize Your Business with AI
                   </h1>
-                  <p className="max-w-[600px] text-logo-100 md:text-xl">
+                  <p className="max-w-[600px] text-blue-100 md:text-xl">
                     Harness the power of Generative AI to transform your products, services, and customer experiences.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-logo-600 hover:bg-logo-100">Get Started</Button>
-                  <Button variant='outline' className="text-white border-white hover:bg-logo-700 hover:text-white">
+                  <Button className="bg-white text-logo-600 hover:bg-blue-100">Get Started</Button>
+                  <Button variant='outline' className="text-white border-white hover:bg-logo-600 hover:text-white">
                     <Link href='/services'>
                       Our Services
                     </Link>
@@ -110,7 +110,7 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                  <Button type="submit" className="bg-logo-600 text-white hover:bg-logo-700">
+                  <Button type="submit" className="bg-logo-600 text-white hover:bg-logo-600">
                     <Link href='https://calendly.com/techconsultingpartners/30min'>
                       Get in touch
                     </Link>

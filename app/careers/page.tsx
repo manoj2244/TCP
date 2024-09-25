@@ -63,7 +63,7 @@ export default function CareersPage() {
             Join Our Team
           </h1>
           <div className="text-center max-w-2xl mx-auto">
-            <p className="text-lg text-logo-200">
+            <p className="text-lg text-blue-200">
               At Tech Consulting Partners, we’re always looking for passionate and talented people to help us build innovative AI solutions. Explore our open positions and become part of a forward-thinking team.
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function CareersPage() {
                 <p className="text-gray-500">
                   <strong>Type:</strong> {job.type}
                 </p>
-                <Button className="mt-4 w-full bg-logo-600 text-white hover:bg-logo-700">
+                <Button className="mt-4 w-full bg-logo-600 text-white hover:bg-logo-600">
                   Apply Now
                 </Button>
               </div>

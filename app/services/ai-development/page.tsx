@@ -8,11 +8,11 @@ const AIDevelopment = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
-      <section className="bg-logo-700 text-white py-20">
+      <section className="bg-logo-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <Brain className="h-20 w-20 text-logo-300 mx-auto mb-6" />
+          <Brain className="h-20 w-20 text-blue-300 mx-auto mb-6" />
           <h1 className="text-5xl font-bold mb-4">AI Development Services</h1>
-          <p className="text-xl text-logo-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
             We&apos;re not just building AI - we&apos;re crafting the future of your business. Let&apos;s transform your ideas into intelligent, scalable solutions.
           </p>
         </div>
@@ -109,7 +109,7 @@ const AIDevelopment = () => {
             <p className="text-xl text-gray-600 mb-6">
               Let&apos;s chat about your vision. Our AI experts are ready to show you how we can turn your challenges into opportunities for innovation and growth.
             </p>
-            <Button size="lg" className="bg-logo-600 text-white hover:bg-logo-700">
+            <Button size="lg" className="bg-logo-600 text-white hover:bg-logo-600">
               <Link href='/contact'>Schedule a consultation</Link>
             </Button>
           </div>

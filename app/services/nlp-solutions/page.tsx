@@ -8,11 +8,11 @@ const NLPDevelopment = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
-      <section className="bg-logo-700 text-white py-20">
+      <section className="bg-logo-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <MessageSquare className="h-20 w-20 text-logo-300 mx-auto mb-6" />
+          <MessageSquare className="h-20 w-20 text-blue-300 mx-auto mb-6" />
           <h1 className="text-5xl font-bold mb-4">NLP Development Services</h1>
-          <p className="text-xl text-logo-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
             We bring language to life. From speech recognition to text analysis, we create intelligent systems that understand and interpret human language.
           </p>
         </div>
@@ -109,7 +109,7 @@ const NLPDevelopment = () => {
             <p className="text-xl text-gray-600 mb-6">
               Let&apos;s explore how NLP can transform your business. Our experts are ready to craft intelligent language solutions tailored to your needs.
             </p>
-            <Button size="lg" className="bg-logo-600 text-white hover:bg-logo-700">
+            <Button size="lg" className="bg-logo-600 text-white hover:bg-logo-600">
               <Link href='/contact'>Schedule a consultation</Link>
             </Button>
           </div>
