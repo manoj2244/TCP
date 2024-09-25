@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+// import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Zap, Brain, MessageCircle, Eye, Globe, Star } from "lucide-react"
 
@@ -82,7 +82,7 @@ export default function LandingPage() {
         </section>
         <section id="features" className="w-full py-4 md:py-6 lg:py-8 flex justify-around bg-white">
           <div className="container px-4 md:px-6 mx-10">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-gray-900">Our AI Solutions</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-center mb-8 text-gray-900">Our AI Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature) => {
                 const Icon = feature.icon; // Assign the icon component dynamically
