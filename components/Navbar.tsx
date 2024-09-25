@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Brain, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,11 +22,12 @@ const Navbar = () => {
   return (
     <header className="px-4 lg:px-6 h-14 flex items-center justify-between border-b border-gray-200 bg-white sticky top-0 z-50">
       <Link className="flex items-center justify-center" href="/">
-        <Brain className="h-6 w-6 text-indigo-600" />
+        {/* <Brain className="h-6 w-6 text-logo-600" /> */}
+        <Image src='/logo.png' width={50} height={50} alt="logo"/>
         <span className="ml-2 text-lg md:text-2xl font-bold text-gray-900">Tech Consulting Partners</span>
       </Link>
       <nav className="hidden md:flex items-center">
-        <Link href="/" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
+        <Link href="/" className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Home
         </Link>
 
@@ -33,7 +35,7 @@ const Navbar = () => {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline underline-offset-4">
+              <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline underline-offset-4">
                 About
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -55,7 +57,7 @@ const Navbar = () => {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline underline-offset-4">
+              <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline underline-offset-4">
                 Services
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -82,19 +84,19 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <Link href="/why-us" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 pl-3 pr-4 py-2">
+        <Link href="/why-us" className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 pl-3 pr-4 py-2">
           Why Us
         </Link>
-        <Link href="/projects" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 pl-3 pr-4 py-2">
+        <Link href="/projects" className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 pl-3 pr-4 py-2">
           Our Work
         </Link>
-        <Link href="/blogs" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" >
+        <Link href="/blogs" className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2" >
           Blog
         </Link>
-        <Link href="/careers" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
+        <Link href="/careers" className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Careers
         </Link>
-        <Link href="https://calendly.com/techconsultingpartners/30min" className="text-sm font-medium text-gray-700 hover:text-indigo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
+        <Link href="https://calendly.com/techconsultingpartners/30min" className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Contact Us
         </Link>
       </nav>

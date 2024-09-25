@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Briefcase, TrendingUp } from 'lucide-react'; // Using Lucide React for icons
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -64,7 +65,7 @@ const ProjectsPage = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h2 className="text-3xl font-semibold mb-4 flex items-center">
-                  <Briefcase className="mr-2 text-indigo-600" />
+                  <Briefcase className="mr-2 text-logo-600" />
                   {project.title}
                 </h2>
                 <p className="mb-6">{project.overview}</p>
@@ -92,14 +93,14 @@ const ProjectsPage = () => {
                 <div>
                   <h3 className="text-xl font-medium mb-3">Impact:</h3>
                   <p>
-                    <TrendingUp className="inline-block mr-2 text-indigo-600" />
+                    <TrendingUp className="inline-block mr-2 text-logo-600" />
                     {project.impact}
                   </p>
                 </div>
 
                 {/* Live Project Link */}
                 <div className="mt-6">
-                  <Button className="bg-indigo-600 text-white hover:bg-indigo-700">
+                  <Button className="bg-logo-600 text-white hover:bg-logo-700">
                     <Link href={project.liveLink} target="_blank">
                       View Live Project
                     </Link>
@@ -108,7 +109,7 @@ const ProjectsPage = () => {
               </div>
 
               <div>
-                <img
+                <Image
                   src={project.visuals}
                   alt={`${project.title} screenshot`}
                   className="w-full h-auto rounded-lg shadow-md"
@@ -131,7 +132,7 @@ const ProjectsPage = () => {
               </p>
             </div>
             <div className="w-full max-w-sm space-y-2">
-              <Button type="submit" className="bg-indigo-600 text-white hover:bg-indigo-700">
+              <Button type="submit" className="bg-logo-600 text-white hover:bg-logo-700">
                 <Link href='https://calendly.com/techconsultingpartners/30min'>
                   Get in touch
                 </Link>

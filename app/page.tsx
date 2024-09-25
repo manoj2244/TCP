@@ -47,7 +47,7 @@ const features = [
 export default function LandingPage() {
   return (
       <main className="flex-1">
-        <section className="w-full py-14 md:py-24 lg:py-32 flex justify-around bg-indigo-600">
+        <section className="w-full py-14 md:py-24 lg:py-32 flex justify-around bg-logo-600">
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
               <div className="flex flex-col justify-center space-y-4">
@@ -55,13 +55,13 @@ export default function LandingPage() {
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
                     Revolutionize Your Business with AI
                   </h1>
-                  <p className="max-w-[600px] text-indigo-100 md:text-xl">
+                  <p className="max-w-[600px] text-logo-100 md:text-xl">
                     Harness the power of Generative AI to transform your products, services, and customer experiences.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-indigo-600 hover:bg-indigo-100">Get Started</Button>
-                  <Button variant='outline' className="text-white border-white hover:bg-indigo-700 hover:text-white">
+                  <Button className="bg-white text-logo-600 hover:bg-logo-100">Get Started</Button>
+                  <Button variant='outline' className="text-white border-white hover:bg-logo-700 hover:text-white">
                     <Link href='/services'>
                       Our Services
                     </Link>
@@ -89,7 +89,7 @@ export default function LandingPage() {
                 const Icon = feature.icon; // Assign the icon component dynamically
                 return (
                   <div key={feature.id} className="flex flex-col items-center text-center">
-                    <Icon className="h-12 w-12 text-indigo-600 mb-4" /> {/* Dynamically render the icon */}
+                    <Icon className="h-12 w-12 text-logo-600 mb-4" /> {/* Dynamically render the icon */}
                     <h3 className="text-xl font-bold mb-2 text-gray-900">{feature.title}</h3>
                     <p className="text-gray-600">{feature.description}</p>
                   </div>
@@ -110,14 +110,14 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                  <Button type="submit" className="bg-indigo-600 text-white hover:bg-indigo-700">
+                  <Button type="submit" className="bg-logo-600 text-white hover:bg-logo-700">
                     <Link href='https://calendly.com/techconsultingpartners/30min'>
                       Get in touch
                     </Link>
                   </Button>
                 {/* <p className="text-xs text-gray-600">
                   By subscribing, you agree to our{" "}
-                  <Link className="underline underline-offset-2 hover:text-indigo-600" href="#">
+                  <Link className="underline underline-offset-2 hover:text-logo-600" href="#">
                     Terms & Conditions
                   </Link>
                   .

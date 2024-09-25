@@ -36,7 +36,7 @@ export const ContactForm = () => {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="p-2 mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
+          className="p-2 mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-logo-500 focus:ring focus:ring-logo-500 focus:ring-opacity-50"
           required
         />
       </div>
@@ -47,7 +47,7 @@ export const ContactForm = () => {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="p-2 mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
+          className="p-2 mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-logo-500 focus:ring focus:ring-logo-500 focus:ring-opacity-50"
           required
         />
       </div>
@@ -57,7 +57,7 @@ export const ContactForm = () => {
           id="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="p-2 text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
+          className="p-2 text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-logo-500 focus:ring focus:ring-logo-500 focus:ring-opacity-50"
           rows={4}
           required
         />
@@ -65,7 +65,7 @@ export const ContactForm = () => {
       <Button
         type="submit"
         size="lg"
-        className="bg-indigo-600 text-white hover:bg-indigo-700"
+        className="bg-logo-600 text-white hover:bg-logo-700"
         disabled={status === 'submitting'}
       >
         {status === 'submitting' ? 'Sending...' : 'Send Message'}

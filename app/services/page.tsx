@@ -61,7 +61,7 @@ const Services = () => {
               return (
                 <Card key={service.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
                   <CardHeader className="p-6 flex items-center space-x-4">
-                    <Icon className="h-8 w-8 text-indigo-600" /> {/* Use the icon dynamically */}
+                    <Icon className="h-8 w-8 text-logo-600" /> {/* Use the icon dynamically */}
                     <div>
                       <CardTitle className="text-xl font-semibold text-gray-900">
                         {service.title}
@@ -72,7 +72,7 @@ const Services = () => {
                     <p className="text-gray-600 text-center">{service.description}</p>
                   </CardContent>
                   <CardContent className="px-6 text-center">
-                    <Link href={`/services/${service.id}`} className="text-indigo-600 underline">More details</Link>
+                    <Link href={`/services/${service.id}`} className="text-logo-600 underline">More details</Link>
                   </CardContent>
                 </Card>
               )

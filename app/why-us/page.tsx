@@ -22,7 +22,7 @@ const WhyUsPage: React.FC = () => {
               </p>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Shield className="h-8 w-8 text-indigo-600" />
+                  <Shield className="h-8 w-8 text-logo-600" />
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">Expertise in Cutting-Edge Technology</h3>
                     <p className="text-gray-600">
@@ -31,7 +31,7 @@ const WhyUsPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <Settings className="h-8 w-8 text-indigo-600" />
+                  <Settings className="h-8 w-8 text-logo-600" />
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">Customized Solutions</h3>
                     <p className="text-gray-600">
@@ -40,7 +40,7 @@ const WhyUsPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <Award className="h-8 w-8 text-indigo-600" />
+                  <Award className="h-8 w-8 text-logo-600" />
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">Proven Track Record</h3>
                     <p className="text-gray-600">
@@ -49,7 +49,7 @@ const WhyUsPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <Star className="h-8 w-8 text-indigo-600" />
+                  <Star className="h-8 w-8 text-logo-600" />
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">Commitment to Excellence</h3>
                     <p className="text-gray-600">

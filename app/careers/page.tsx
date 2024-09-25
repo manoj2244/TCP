@@ -57,13 +57,13 @@ const benefits = [
 export default function CareersPage() {
   return (
     <main className="flex-1">
-      <section className="w-full py-14 md:py-24 lg:py-32 bg-indigo-600">
+      <section className="w-full py-14 md:py-24 lg:py-32 bg-logo-600">
         <div className="container px-4 md:px-6">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-White">
             Join Our Team
           </h1>
           <div className="text-center max-w-2xl mx-auto">
-            <p className="text-lg text-indigo-200">
+            <p className="text-lg text-logo-200">
               At Tech Consulting Partners, we’re always looking for passionate and talented people to help us build innovative AI solutions. Explore our open positions and become part of a forward-thinking team.
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function CareersPage() {
                 <p className="text-gray-500">
                   <strong>Type:</strong> {job.type}
                 </p>
-                <Button className="mt-4 w-full bg-indigo-600 text-white hover:bg-indigo-700">
+                <Button className="mt-4 w-full bg-logo-600 text-white hover:bg-logo-700">
                   Apply Now
                 </Button>
               </div>
@@ -103,7 +103,7 @@ export default function CareersPage() {
               const Icon = benefit.icon;
               return (
                 <div key={index} className="flex flex-col items-center text-center bg-white shadow-lg rounded-lg p-6">
-                  <Icon className="h-12 w-12 text-indigo-600 mb-4" />
+                  <Icon className="h-12 w-12 text-logo-600 mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
