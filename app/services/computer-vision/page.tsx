@@ -12,7 +12,7 @@ const ComputerVisionServices = () => {
         <div className="container mx-auto px-4 text-center">
           <Eye className="h-20 w-20 text-blue-300 mx-auto mb-6" />
           <h1 className="text-5xl font-bold mb-4">Computer Vision Services</h1>
-          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
             Empower your business with cutting-edge computer vision solutions. From image recognition to real-time video analysis, we bring your visual data to life.
           </p>
         </div>
