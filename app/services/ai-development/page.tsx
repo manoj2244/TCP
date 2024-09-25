@@ -8,7 +8,7 @@ const AIDevelopment = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
-      <section className="bg-logo-600 text-white py-20">
+      <section className="bg-logo-600 text-white py-5">
         <div className="container mx-auto px-4 text-center">
           <Brain className="h-20 w-20 text-blue-300 mx-auto mb-6" />
           <h1 className="text-5xl font-bold mb-4">AI Development Services</h1>
