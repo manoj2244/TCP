@@ -110,7 +110,7 @@ export default function LandingPage() {
               </div>
               <div className="w-full max-w-sm space-y-2">
                   <Button type="submit" className="bg-logo-600 text-white hover:bg-blue-600/80">
-                    <Link href='https://calendly.com/techconsultingpartners/30min'>
+                    <Link href='/contact'>
                       Get in touch
                     </Link>
                   </Button>

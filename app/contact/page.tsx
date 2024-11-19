@@ -14,7 +14,7 @@ const ContactPage = () => {
       {/* Hero Section */}
       <section className="bg-logo-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-5xl font-bold mb-4 text-white">Contact Us</h1>
           <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
             We’d love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to get in touch.
           </p>

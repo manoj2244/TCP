@@ -1,77 +1,209 @@
 'use client'
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { createClient } from '@supabase/supabase-js';
+import toast from 'react-hot-toast';
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 export const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    subject: '',
+    message: '',
+    service_interest: '',
+    preferred_contact: 'email',
+    budget: '',
+    timeline: ''
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    setStatus('submitting');
+    setLoading(true);
 
     try {
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message }),
+      const { error } = await supabase
+        .from('contact_inquiries')
+        .insert([formData]);
+
+      if (error) throw error;
+
+      toast.success('Message sent successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        subject: '',
+        message: '',
+        service_interest: '',
+        preferred_contact: 'email',
+        budget: '',
+        timeline: ''
       });
-      setStatus('success');
-      setName('');
-      setEmail('');
-      setMessage('');
-    } catch {
-      setStatus('error');
+    } catch (error) {
+      toast.error('Failed to send message. Please try again.');
+      console.error('Error:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label htmlFor="name" className="block text-lg font-medium text-gray-700">Name</label>
-        <input
-          id="name"
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="p-2 mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-          required
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name *</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            value={formData.name}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email *</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="company" className="block text-sm font-medium text-gray-700">Company</label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            value={formData.company}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            value={formData.phone}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          />
+        </div>
+
+        <div className="md:col-span-2">
+          <label htmlFor="service_interest" className="block text-sm font-medium text-gray-700">Service Interest *</label>
+          <select
+            id="service_interest"
+            name="service_interest"
+            value={formData.service_interest}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            required
+          >
+            <option value="">Select a service</option>
+            <option value="ai-development">AI Development</option>
+            <option value="nlp-solutions">NLP Solutions</option>
+            <option value="computer-vision">Computer Vision</option>
+            <option value="web-development">Web Development</option>
+            <option value="automations">Automations</option>
+            <option value="recommendation-systems">Recommendation Systems</option>
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="budget" className="block text-sm font-medium text-gray-700">Budget Range</label>
+          <select
+            id="budget"
+            name="budget"
+            value={formData.budget}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          >
+            <option value="">Select budget range</option>
+            <option value="<5k">Less than $5,000</option>
+            <option value="5k-10k">$5,000 - $10,000</option>
+            <option value="10k-25k">$10,000 - $25,000</option>
+            <option value="25k+">$25,000+</option>
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="timeline" className="block text-sm font-medium text-gray-700">Project Timeline</label>
+          <select
+            id="timeline"
+            name="timeline"
+            value={formData.timeline}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          >
+            <option value="">Select timeline</option>
+            <option value="immediate">Immediate</option>
+            <option value="1-3months">1-3 months</option>
+            <option value="3-6months">3-6 months</option>
+            <option value="6months+">6+ months</option>
+          </select>
+        </div>
+
+        <div className="md:col-span-2">
+          <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Subject *</label>
+          <input
+            id="subject"
+            name="subject"
+            type="text"
+            value={formData.subject}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            required
+          />
+        </div>
+
+        <div className="md:col-span-2">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message *</label>
+          <textarea
+            id="message"
+            name="message"
+            rows={4}
+            value={formData.message}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            required
+          />
+        </div>
       </div>
-      <div>
-        <label htmlFor="email" className="block text-lg font-medium text-gray-700">Email</label>
-        <input
-          id="email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="p-2 mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="message" className="block text-lg font-medium text-gray-700">Message</label>
-        <textarea
-          id="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="p-2 text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-          rows={4}
-          required
-        />
-      </div>
-      <Button
-        type="submit"
-        size="lg"
-        className="bg-logo-600 text-white hover:bg-logo-600"
-        disabled={status === 'submitting'}
+
+      <Button 
+        type="submit" 
+        className="w-full bg-logo-600 text-white hover:bg-logo-600/90"
+        disabled={loading}
       >
-        {status === 'submitting' ? 'Sending...' : 'Send Message'}
+        {loading ? 'Sending...' : 'Send Message'}
       </Button>
-      {status === 'success' && <p className="text-green-500">Your message has been sent!</p>}
-      {status === 'error' && <p className="text-red-500">There was an error sending your message.</p>}
     </form>
   );
 };
