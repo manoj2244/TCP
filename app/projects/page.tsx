@@ -63,7 +63,7 @@ const ProjectsPage = () => {
             Our Projects
           </h1>
           <p className="text-xl text-center text-blue-100 max-w-3xl mx-auto">
-            Explore the cutting-edge solutions we've delivered for our clients, spanning AI, NLP, and Computer Vision.
+            Explore the cutting-edge solutions we&apos;ve delivered for our clients, spanning AI, NLP, and Computer Vision.
           </p>
         </div>
       </section>
