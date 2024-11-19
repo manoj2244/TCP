@@ -83,6 +83,7 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
             experience: parseInt(formData.get('experience') as string),
             github_profile: formData.get('github'),
             linkedin_profile: formData.get('linkedin'),
+            current_location: formData.get('location'),
             resume_url: publicUrl,
             has_disability: formData.get('disability') === 'true'
           }
@@ -145,6 +146,17 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
       </div>
 
       <div>
+        <Label htmlFor="location" className="text-gray-700 font-medium">Current Location</Label>
+        <Input 
+          id="location" 
+          name="location" 
+          required 
+          placeholder="City, Country"
+          className="mt-1 bg-white border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+
+      <div>
         <Label htmlFor="github" className="text-gray-700 font-medium">GitHub Profile</Label>
         <Input 
           id="github" 
@@ -152,7 +164,6 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
           placeholder="https://github.com/username" 
           pattern="https?:\/\/github\.com\/.*"
           title="Please enter a valid GitHub profile URL"
-          required 
           className="mt-1 bg-white border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
         />
       </div>
@@ -193,7 +204,7 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
           htmlFor="disability" 
           className="text-gray-700 text-sm"
         >
-          I identify as an individual with a disability
+           I identify as a person with a physical or neurological disability.
         </Label>
       </div>
 
