@@ -96,7 +96,7 @@ const Navbar = () => {
         <Link href="/careers" className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Careers
         </Link>
-        <Link href="https://calendly.com/techconsultingpartners/30min" className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
+        <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-logo-600 hover:underline hover:bg-gray-100 rounded-md underline-offset-4 px-4 py-2">
           Contact Us
         </Link>
       </nav>

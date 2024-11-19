@@ -83,7 +83,8 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
             experience: parseInt(formData.get('experience') as string),
             github_profile: formData.get('github'),
             linkedin_profile: formData.get('linkedin'),
-            resume_url: publicUrl
+            resume_url: publicUrl,
+            has_disability: formData.get('disability') === 'true'
           }
         ]);
 
@@ -105,6 +106,10 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
       onSubmit={handleSubmit} 
       className="space-y-6 bg-white p-8 rounded-lg shadow-lg border border-gray-100"
     >
+      <div className="mb-6 text-gray-700 text-sm">
+        We are an equal opportunity employer and do not discriminate based on race, color, religion, sex, sexual orientation, gender identity, national origin, disability status, protected veteran status, or any other characteristic protected by law.
+      </div>
+
       <div>
         <Label htmlFor="fullName" className="text-gray-700 font-medium">Full Name</Label>
         <Input 
@@ -174,6 +179,22 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
           required 
           className="mt-1 bg-white border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
         />
+      </div>
+
+      <div className="flex items-start space-x-2">
+        <Input 
+          type="checkbox" 
+          id="disability" 
+          name="disability" 
+          value="true"
+          className="mt-1 h-4 w-4"
+        />
+        <Label 
+          htmlFor="disability" 
+          className="text-gray-700 text-sm"
+        >
+          I identify as an individual with a disability
+        </Label>
       </div>
 
       <Button 
