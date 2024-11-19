@@ -94,7 +94,6 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : "Failed to submit application. Please try again.";
       toast.error(errorMessage);
-      console.error(error);
     } finally {
       setLoading(false);
     }
@@ -104,7 +103,7 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
     <form 
       ref={formRef}
       onSubmit={handleSubmit} 
-      className="space-y-6 bg-gray-50 p-8 rounded-lg shadow-lg border border-gray-200"
+      className="space-y-6 bg-white p-8 rounded-lg shadow-lg border border-gray-100"
     >
       <div>
         <Label htmlFor="fullName" className="text-gray-700 font-medium">Full Name</Label>

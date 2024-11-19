@@ -1,41 +1,24 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Toaster } from 'react-hot-toast';
+import { Inter } from "next/font/google"
+import "./globals.css"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
+import { Toaster } from "react-hot-toast"
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-export const metadata: Metadata = {
-  title: "Tech Consulting Partners",
-  description: "Revolutionize your business with AI",
-};
+const inter = Inter({ subsets: ["latin"] })
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-gray-50`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} antialiased flex flex-col min-h-screen bg-gray-50 text-gray-900`} suppressHydrationWarning>
         <Navbar />
         {children}
         <Footer />
-        <Toaster />
+        <Toaster position="bottom-right" />
       </body>
     </html>
-  );
+  )
 }
