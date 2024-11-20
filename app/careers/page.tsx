@@ -14,7 +14,7 @@ export default function CareersPage() {
   return (
     <main className="flex-1">
       <Banner 
-        title="Join Our Team"
+        title="Join Our Inclusive Team"
         description="Tech Consulting Partners is a UK-based technology company with a branch in India, dedicated to enhancing the shopping experience through AI and machine learning. We're building innovative products like JewelMirror and ConversAI, and we're looking for talented individuals to join our journey."
         Icon={Users}
       />
@@ -42,7 +42,7 @@ export default function CareersPage() {
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Requirements:</h4>
                     <ul className="list-disc list-inside text-gray-600">
-                      {job.requirements.slice(0, 3).map((req, index) => (
+                      {job.requirements.slice(0, 4).map((req, index) => (
                         <li key={index}>{req}</li>
                       ))}
                     </ul>

@@ -160,11 +160,12 @@ export const ContactForm = () => {
           >
             <option value="">Select a service</option>
             <option value="ai-development">AI Development</option>
-            <option value="nlp-solutions">NLP Solutions</option>
+            <option value="Generative AI">Generative AI Solutions</option>
             <option value="computer-vision">Computer Vision</option>
-            <option value="web-development">Web Development</option>
-            <option value="automations">Automations</option>
             <option value="recommendation-systems">Recommendation Systems</option>
+            <option value="web-development">Full Stack Development</option>
+            <option value="automations">Low Code/No Code Solutions</option>
+            <option value="other-solutions">Other IT Services</option>
           </select>
         </div>
 
