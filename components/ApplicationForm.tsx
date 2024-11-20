@@ -162,7 +162,6 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
         <Input 
           id="github" 
           name="github" 
-          required
           placeholder="https://github.com/username" 
           pattern="https?:\/\/github\.com\/.*"
           title="Please enter a valid GitHub profile URL"
@@ -177,7 +176,6 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
           name="linkedin" 
           placeholder="https://linkedin.com/in/username" 
           title="Please enter a valid LinkedIn profile URL"
-          required 
           className="mt-1 bg-white border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
         />
       </div>
