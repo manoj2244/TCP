@@ -19,9 +19,9 @@ export default async function JobDetailsPage({ params }: Props) {
   }
 
   return (
-    <main className="flex-1 py-12 lg:py-20 bg-gray-50">
-      <Banner 
-        title={`Join Our Team - ${job.title}`}
+    <main className="flex-1 py-12 lg:py-0 bg-gray-50">
+      <Banner
+        title={`Join Our Inclusive Team `}
         description={job.description}
         Icon={job.icon}
       />
@@ -30,15 +30,19 @@ export default async function JobDetailsPage({ params }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Column - Job Details */}
           <div className="space-y-8">
+
             <section className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-semibold mb-4">Overview</h2>
+              <h2> {job.title}</h2>
+              <br />
+
+              <h2 className="text-2xl font-semibold mb-4">Experience</h2>
               <p className="text-gray-600 leading-relaxed">
-                {job.description}
+                {job.experience}
               </p>
             </section>
 
-            <section className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-semibold mb-4">Requirements</h2>
+            <section className="bg-white p-2 rounded-lg shadow-sm">
+              <h2 className="text-2xl font-semibold mb-3">Requirements</h2>
               <ul className="space-y-3">
                 {job.requirements.map((req, index) => (
                   <li key={index} className="flex items-start">
