@@ -32,7 +32,7 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
 
       // Check for existing applications
       const { data: existingApplications } = await supabase
-        .from('job_applications')
+        .from('tcp_job_applications')
         .select('id')
         .eq('job_id', jobId)
         .or(`email.eq.${email},github_profile.eq.${githubProfile}`);
@@ -73,7 +73,7 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
 
       // Store application data in Supabase table
       const { error: insertError } = await supabase
-        .from('job_applications')
+        .from('tcp_job_applications')
         .insert([
           {
             job_id: jobId,
@@ -81,6 +81,7 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
             full_name: formData.get('fullName'),
             email: formData.get('email'),
             experience: parseInt(formData.get('experience') as string),
+            salary_expectation: parseInt(formData.get('salary') as string),
             github_profile: formData.get('github'),
             linkedin_profile: formData.get('linkedin'),
             current_location: formData.get('location'),
@@ -161,6 +162,7 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
         <Input 
           id="github" 
           name="github" 
+          required
           placeholder="https://github.com/username" 
           pattern="https?:\/\/github\.com\/.*"
           title="Please enter a valid GitHub profile URL"
@@ -192,11 +194,26 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
         />
       </div>
 
+      
+
+      <div>
+        <Label htmlFor="salary" className="text-gray-700 font-medium">Expected Annual Salary ($)</Label>
+        <Input 
+          type="number" 
+          id="salary" 
+          name="salary" 
+          required 
+          step="1000"
+          placeholder="Enter your expected annual salary"
+          className="mt-1 bg-white border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+
       <div className="flex items-start space-x-2">
         <Input 
           type="checkbox" 
           id="disability" 
-          name="disability" 
+          name="disability"
           value="true"
           className="mt-1 h-4 w-4"
         />
@@ -204,7 +221,7 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
           htmlFor="disability" 
           className="text-gray-700 text-sm"
         >
-           I identify as a person with a physical or neurological disability.
+          I identify as a person with a physical or neurological disability.
         </Label>
       </div>
 
@@ -215,6 +232,8 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
       >
         {loading ? 'Submitting...' : 'Submit Application'}
       </Button>
+
+      
     </form>
   );
 }
