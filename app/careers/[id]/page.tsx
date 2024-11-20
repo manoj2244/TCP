@@ -2,6 +2,7 @@ import { jobOpenings } from '../data';
 import { ApplicationForm } from '@/components/ApplicationForm';
 import { notFound } from 'next/navigation';
 import { CheckCircle2 } from 'lucide-react';
+import { Banner } from '../../components/Banner';
 
 type Props = {
   params: Promise<{
@@ -19,18 +20,11 @@ export default async function JobDetailsPage({ params }: Props) {
 
   return (
     <main className="flex-1 py-12 lg:py-20 bg-gray-50">
-      <section className="w-full py-14 md:py-24 lg:py-32 bg-logo-600">
-        <div className="container px-4 md:px-6">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-white">
-            {job.title}
-          </h1>
-          <div className="text-center max-w-3xl mx-auto">
-            <p className="text-lg text-blue-100 mb-8">
-              Join our team and work on cutting-edge technology solutions that make a difference.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Banner 
+        title={`Join Our Team - ${job.title}`}
+        description={job.description}
+        Icon={job.icon}
+      />
 
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -47,6 +41,18 @@ export default async function JobDetailsPage({ params }: Props) {
               <h2 className="text-2xl font-semibold mb-4">Requirements</h2>
               <ul className="space-y-3">
                 {job.requirements.map((req, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle2 className="w-5 h-5 text-green-500 mr-3 mt-0.5" />
+                    <span className="text-gray-600">{req}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="bg-white p-6 rounded-lg shadow-sm">
+              <h2 className="text-2xl font-semibold mb-4">Responsibilities</h2>
+              <ul className="space-y-3">
+                {job.responsibilities.map((req, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle2 className="w-5 h-5 text-green-500 mr-3 mt-0.5" />
                     <span className="text-gray-600">{req}</span>
