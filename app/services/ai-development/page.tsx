@@ -3,22 +3,15 @@ import { Brain, Cpu, Database, Network, Zap, BarChart, Bot, Code, Calendar, Laye
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
 import Link from 'next/link';
-
+import { Banner } from '../../components/Banner';
 const AIDevelopment = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-      {/* Hero Section */}
-      <section className="bg-logo-600 text-white pb-3 pt-6">
-        <div className="container mx-auto px-4 flex justify-center">
-          <Brain className="h-12 w-12 text-blue-300 mr-2" />
-          <div>
-            <h1 className="text-5xl font-bold mb-2 text-center">AI Development Services</h1>
-            <p className="text-xl text-blue-200 mb-4 max-w-2xl text-center">
-              We&apos;re not just building AI - we&apos;re crafting the future of your business. <br />Let&apos;s transform your ideas into intelligent, scalable solutions.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Banner 
+        title="AI Development Services"
+        description="We're not just building AI - we're crafting the future of your business. Let's transform your ideas into intelligent, scalable solutions."
+        Icon={Brain}
+      />
 
       {/* Main Content */}
       <section className="container mx-auto px-4 py-8">

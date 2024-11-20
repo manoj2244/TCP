@@ -21,7 +21,8 @@ export const ContactForm = () => {
     service_interest: '',
     budget: '',
     timeline: '',
-    preferred_contact: 'email'
+    preferred_contact: 'email',
+    country: ''
   });
   const [loading, setLoading] = useState(false);
 
@@ -55,7 +56,8 @@ export const ContactForm = () => {
         service_interest: '',
         budget: '',
         timeline: '',
-        preferred_contact: 'email'
+        preferred_contact: 'email',
+        country: ''
       });
     } catch (error) {
       toast.error('Failed to send message. Please try again.');
@@ -122,6 +124,18 @@ export const ContactForm = () => {
         </div>
 
         <div>
+          <label htmlFor="country" className="block text-sm font-medium text-gray-700">Country</label>
+          <input
+            id="country"
+            name="country"
+            type="text"
+            value={formData.country}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
           <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
           <input
             id="phone"
@@ -132,6 +146,7 @@ export const ContactForm = () => {
             className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
         </div>
+
 
         <div className="md:col-span-2">
           <label htmlFor="service_interest" className="block text-sm font-medium text-gray-700">Service Interest *</label>
