@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import type { Metadata } from 'next'
 import { jobOpenings } from './data';
+import { Users } from 'lucide-react';
+import { Banner } from "../components/Banner";
 
 export const metadata: Metadata = {
   title: 'Careers | Tech Consulting Partners',
@@ -11,18 +13,11 @@ export const metadata: Metadata = {
 export default function CareersPage() {
   return (
     <main className="flex-1">
-      <section className="w-full py-14 md:py-24 lg:py-32 bg-logo-600">
-        <div className="container px-4 md:px-6">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-white">
-            Join Our Team
-          </h1>
-          <div className="text-center max-w-3xl mx-auto">
-            <p className="text-lg text-blue-200 mb-8">
-              Tech Consulting Partners is a UK-based technology company with a branch in India, dedicated to enhancing the shopping experience through AI and machine learning. We&apos;re building innovative products like JewelMirror and ConversAI, and we&apos;re looking for talented individuals to join our journey.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Banner 
+        title="Join Our Team"
+        description="Tech Consulting Partners is a UK-based technology company with a branch in India, dedicated to enhancing the shopping experience through AI and machine learning. We're building innovative products like JewelMirror and ConversAI, and we're looking for talented individuals to join our journey."
+        Icon={Users}
+      />
 
       <section className="w-full py-14 md:py-24 lg:py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto max-w-7xl">

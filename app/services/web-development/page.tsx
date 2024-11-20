@@ -3,22 +3,17 @@ import { Globe, Code, Zap, Layout, Server, Shield, Layers, Database, Repeat, Cal
 import { Button } from "@/components/ui/button";
 import { ServiceItem } from '@/components/ServiceItem';
 import Link from 'next/link';
+import { Banner } from '../../components/Banner';
 
 const WebDevelopmentServices = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
       {/* Hero Section */}
-      <section className="bg-logo-600 text-white pb-3 pt-6">
-        <div className="container mx-auto px-4 flex justify-center">
-          <Globe className="h-12 w-12 text-blue-300 mr-2" />
-          <div>
-            <h1 className="text-5xl font-bold mb-2 text-center">Web Development Services</h1>
-            <p className="text-xl text-blue-200 mb-4 max-w-3xl text-center">
-              Transform your digital presence with our cutting-edge web development solutions. From responsive interfaces to AI-powered web applications, we bring vision to life.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Banner 
+        title="Web Development Services"
+        description="Transform your digital presence with our cutting-edge web development solutions. From responsive interfaces to AI-powered web applications, we bring vision to life."
+        Icon={Globe}
+      />
 
       {/* Main Content */}
       <section className="container mx-auto px-4 py-8">

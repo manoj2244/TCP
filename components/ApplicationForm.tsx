@@ -221,7 +221,7 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
           htmlFor="disability" 
           className="text-gray-700 text-sm"
         >
-          I identify as a person with a physical or neurological disability.
+          I identify as a differently abled person (including physical or neurological disability).
         </Label>
       </div>
 

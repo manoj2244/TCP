@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import { Briefcase, TrendingUp } from 'lucide-react';
+import { Briefcase, TrendingUp, Blocks } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-
+import { Banner } from '../components/Banner';
 const projects = [
   {
     title: 'ConversAI',
@@ -56,20 +56,15 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-      <section className="w-full py-14 md:py-24 lg:py-32 bg-logo-600">
-        <div className="container px-4 md:px-6">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-white">
-            Our Projects
-          </h1>
-          <p className="text-xl text-center text-blue-100 max-w-3xl mx-auto">
-            Explore the cutting-edge solutions we&apos;ve delivered for our clients, spanning AI, NLP, and Computer Vision.
-          </p>
-        </div>
-      </section>
+    <main className="flex-1">
+      <Banner 
+        title="Our Projects"
+        description="Explore our innovative solutions that combine cutting-edge AI technology with practical business applications. From e-commerce enhancements to intelligent automation systems."
+        Icon={Blocks}
+      />
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="space-y-20">
+      <div className="container px-4 py-12 md:px-6 mx-auto">
+        <div className="space-y-12">
           {projects.map((project, index) => (
             <div key={index} className="bg-white shadow-xl rounded-xl overflow-hidden">
               <div className="grid md:grid-cols-2 gap-8 p-8">
@@ -151,7 +146,7 @@ const ProjectsPage = () => {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 
