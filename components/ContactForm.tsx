@@ -13,14 +13,15 @@ export const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
+    company_name: '',
+    company_website: '',
     phone: '',
     subject: '',
     message: '',
     service_interest: '',
-    preferred_contact: 'email',
     budget: '',
-    timeline: ''
+    timeline: '',
+    preferred_contact: 'email'
   });
   const [loading, setLoading] = useState(false);
 
@@ -37,7 +38,7 @@ export const ContactForm = () => {
 
     try {
       const { error } = await supabase
-        .from('contact_inquiries')
+        .from('tcp_contact_inquiries')
         .insert([formData]);
 
       if (error) throw error;
@@ -46,14 +47,15 @@ export const ContactForm = () => {
       setFormData({
         name: '',
         email: '',
-        company: '',
+        company_name: '',
+        company_website: '',
         phone: '',
         subject: '',
         message: '',
         service_interest: '',
-        preferred_contact: 'email',
         budget: '',
-        timeline: ''
+        timeline: '',
+        preferred_contact: 'email'
       });
     } catch (error) {
       toast.error('Failed to send message. Please try again.');
@@ -93,13 +95,28 @@ export const ContactForm = () => {
         </div>
 
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700">Company</label>
+          <label htmlFor="company_name" className="block text-sm font-mediu m text-gray-700">Company Name</label>
           <input
-            id="company"
-            name="company"
+            id="company_name"
+            name="company_name"
             type="text"
-            value={formData.company}
+            value={formData.company_name}
             onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="company_website" className="block text-sm font-medium text-gray-700">Company Website</label>
+          <input
+            id="company_website"
+            name="company_website"
+            type="url"
+            value={formData.company_website}
+            onChange={handleChange}
+            placeholder="https://example.com"
+            pattern="https?://.+"
+            title="Please enter a valid URL starting with http:// or https://"
             className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
         </div>

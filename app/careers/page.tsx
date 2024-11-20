@@ -33,10 +33,15 @@ export default function CareersPage() {
             {jobOpenings.map((job) => {
               const Icon = job.icon;
               return (
-                <div key={job.id} className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow">
+                <div key={job.id} className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow w-full">
                   <div className="flex items-center mb-4">
                     <Icon className="h-8 w-8 text-logo-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{job.title}</h3>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">{job.title}</h3>
+                      <span className={`text-sm ${job.type === 'internship' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'} px-2 py-1 rounded-full`}>
+                        {job.type === 'internship' ? 'Internship' : 'Full-time'}
+                      </span>
+                    </div>
                   </div>
                   <p className="text-gray-600 mb-4">{job.description}</p>
                   <div className="mb-4">
@@ -47,9 +52,9 @@ export default function CareersPage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex flex-col space-y-2 mb-4">
                     <span className="text-gray-500">📍 {job.location}</span>
-                    <span className="text-gray-500">💼 {job.type}</span>
+                    <span className="text-gray-500">💼 Experience: {job.experience}</span>
                   </div>
                   <Link href={`/careers/${job.id}`}>
                     <Button className="w-full bg-logo-600 text-white hover:bg-logo-600/90">
