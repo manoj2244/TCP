@@ -21,6 +21,21 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
   const [loading, setLoading] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
+  // Disable applications for specific roles
+  const disabledRoles = ['fullstack-developer-intern', 'ai-engineer', 'ai-engineer-intern','fullstack-developer'];
+  const isDisabled = disabledRoles.includes(jobId);
+
+  if (isDisabled) {
+    return (
+      <div className="p-6 bg-gray-50 rounded-lg border border-gray-200">
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">Applications Currently Closed</h3>
+        <p className="text-gray-600">
+          We are not accepting applications for this position at the moment. Please check back later or explore our other open positions.
+        </p>
+      </div>
+    );
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
