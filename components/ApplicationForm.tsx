@@ -22,7 +22,7 @@ export function ApplicationForm({ jobId, jobTitle }: ApplicationFormProps) {
   const formRef = useRef<HTMLFormElement>(null);
 
   // Disable applications for specific roles
-  const disabledRoles = ['fullstack-developer-intern', 'ai-engineer', 'ai-engineer-intern','fullstack-developer'];
+  const disabledRoles = ['ai-engineer', 'ai-engineer-intern'];
   const isDisabled = disabledRoles.includes(jobId);
 
   if (isDisabled) {
