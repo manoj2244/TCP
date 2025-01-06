@@ -9,6 +9,15 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		fontWeight: {
+			light: "400",   // Custom light font weight
+			medium: "500",  // Custom medium font weight
+			bold: "700",    // Custom bold font weight
+			'extra-bold': "800",  // Custom extra bold font weight
+		  },
+		fontFamily: {
+			poppins: ['Poppins', 'sans-serif'],
+		  },
   		colors: {
 			logo:{
 				600: "#2071c3",

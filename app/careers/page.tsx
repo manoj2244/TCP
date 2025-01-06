@@ -17,7 +17,7 @@ export default function CareersPage() {
         title="Join Our Inclusive Team"
         description="Tech Consulting Partners is a UK-based technology company with a branch in India, dedicated to enhancing the shopping experience through AI and machine learning. We're building innovative products like JewelMirror and ConversAI, and we're looking for talented individuals to join our journey."
         Icon={Users}
-      />
+      /> 
 
       <section className="w-full py-14 md:py-24 lg:py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto max-w-7xl">
