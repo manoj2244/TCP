@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactForm } from '@/components/ContactForm';
+// import { ContactForm } from '@/components/ContactForm';
 import type { Metadata } from 'next'
 import { MessageCircle } from 'lucide-react';
 import { Banner } from '../components/Banner';
@@ -23,7 +23,7 @@ const ContactPage = () => {
       {/* Main Content */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-8">
-          <ContactForm />
+          {/* <ContactForm /> */}
         </div>
       </section>
     </main>

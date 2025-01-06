@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 import { Zap, Brain, MessageCircle, Eye, Globe, Star } from "lucide-react";
-import { url } from "inspector";
 import Image from "next/image";
 
 const features = [
@@ -130,13 +129,13 @@ export default function LandingPage() {
       >
         <div className="container px-4 md:px-6 mx-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature) => {
+            {features.map((feature,index) => {
               const Icon = feature.icon;
               const bgColor = feature.bgColor;
               return (
              
 
-                <div className="flex w-full gap-x-2 ">
+                <div key={index} className="flex w-full gap-x-2 ">
                   <div
                     className={`w-[83px] h-[83px] !max-w-[100px] rounded-[20px] flex justify-center`}
                     style={{
