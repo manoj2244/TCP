@@ -17,7 +17,7 @@ const config: Config = {
 		  },
 		fontFamily: {
 			poppins: ['Poppins', 'sans-serif'],
-		  },
+		},
   		colors: {
 			logo:{
 				600: "#2071c3",

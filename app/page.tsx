@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 
 import { Zap, Brain, MessageCircle, Eye, Globe, Star } from "lucide-react";
 import Image from "next/image";
+import { MainContent } from "@/components/mainContent";
 
 const features = [
   {
@@ -166,8 +167,16 @@ export default function LandingPage() {
         </div>
       </section>
       <hr className="border-t-1 border-[#C7C7C7] my-4" />
+      <section className="flex justify-center items-center flex-col py-10">
+        <div className="text-[33px] font-poppins font-semibold">Lorem Ipsum is simply dummy text of the printing. </div>
+        <div className="text-[#868686] font-poppins font-normal  text-[18px]  w-[670px] text-center my-4">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
+        </div>
 
-      <section
+
+      </section>
+
+      {/* <section
         id="cta"
         className="w-full py-4 md:py-6 lg:py-8 flex justify-around bg-gray-100"
       >
@@ -188,16 +197,17 @@ export default function LandingPage() {
               >
                 <Link href="/contact">Get in touch</Link>
               </Button>
-              {/* <p className="text-xs text-gray-600">
-                  By subscribing, you agree to our{" "}
-                  <Link className="underline underline-offset-2 hover:text-logo-600" href="#">
-                    Terms & Conditions
-                  </Link>
-                  .
-                </p> */}
+             
             </div>
           </div>
         </div>
+      </section> */}
+
+      <section className="bg-white">
+        <MainContent/>
+      </section>
+      <section>
+
       </section>
     </main>
   );
