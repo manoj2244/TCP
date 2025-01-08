@@ -68,6 +68,7 @@ export const MainContent = () => {
             </div>
 
             {/* Main Heading and Content */}
+            
             <div className="flex flex-col gap-4">
               <div className="font-semibold text-[30px] text-gray-800 font-poppins">
                 {/* Split mainHeading and style first two words */}

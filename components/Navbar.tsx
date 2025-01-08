@@ -174,7 +174,7 @@ const Navbar = () => {
         </NavigationMenu>
 
         {/* Other Links */}
-        <Link
+        {/* <Link
           href="/why-us"
           className={`relative text-[16px] font-poppins font-medium text-gray-700 hover:text-logo-600  hover:bg-gray-100 rounded-md underline-offset-4 pl-3 pr-4 py-2 ${
             isActive("/why-us") ? "!text-blue-600 active-link" : ""
@@ -184,7 +184,7 @@ const Navbar = () => {
           {isActive("/why-us" )&& (
                     <span className="absolute left-[3px] top-[3px] mx-auto w-2 h-2 rounded-full bg-[#08D3BB]"></span>
                   )}
-        </Link>
+        </Link> */}
         <Link
           href="/projects"
           className={`relative text-[16px] font-poppins font-medium text-gray-700 hover:text-logo-600  hover:bg-gray-100 rounded-md underline-offset-4 pl-3 pr-4 py-2 ${

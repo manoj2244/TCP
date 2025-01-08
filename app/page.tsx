@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Zap, Brain, MessageCircle, Eye, Globe, Star } from "lucide-react";
 import Image from "next/image";
 import { MainContent } from "@/components/mainContent";
+import { ViewMoreCard } from "@/components/viewMore";
+import { NewsLetter } from "@/components/newsLetter";
 
 const features = [
   {
@@ -206,8 +208,11 @@ export default function LandingPage() {
       <section className="bg-white">
         <MainContent/>
       </section>
+      <section className="bg-white">
+<ViewMoreCard/>
+      </section>
       <section>
-
+        <NewsLetter/>
       </section>
     </main>
   );
