@@ -6,80 +6,82 @@ import { Linkedin, Facebook, Instagram, Twitter } from "lucide-react";
 const Footer = () => {
   return (
     <>
-      <div>
-        <div className="grid grid-cols-12 px-44 py-12">
-          <div className="col-span-4 flex flex-col gap-y-6">
+      <div className="px-6 py-12 md:px-44">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+          {/* Logo and About Section */}
+          <div className="md:col-span-4 flex flex-col gap-y-6">
             <Link className="flex items-center" href="/">
               <Image src="/logo.png" width={50} height={50} alt="logo" />
               <span className="ml-2 text-lg md:text-2xl font-bold text-gray-900">
                 Tech Consulting Partners
               </span>
             </Link>
-            <div className="text-[#515151] text-[16px] font-poppins font-normal">
+            <div className="text-[#515151] text-[14px] md:text-[16px] font-poppins font-normal">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </div>
-            <div className="text-[#515151] text-[16px] font-poppins font-normal">
+            <div className="text-[#515151] text-[14px] md:text-[16px] font-poppins font-normal">
               @Tech Consulting Partners
             </div>
           </div>
-          <div className="col-span-2">
-            <ul className="flex flex-col gap-y-1">
-              <li className="text-[18px] text-[#000] font-poppins font-medium mt-4 mb-7">
+
+          {/* About Us Links Section */}
+          <div className="md:col-span-2">
+            <ul className="flex flex-col gap-y-3">
+              <li className="text-[16px] text-[#000] font-poppins font-medium mb-4">
                 <Link href="/why-us">About Us</Link>
               </li>
-              <li className="text-[16px] text-[#515151] font-poppins font-normal ">
+              <li className="text-[14px] md:text-[16px] text-[#515151] font-poppins font-normal">
                 <Link href="/why-us">Our Team</Link>
               </li>
-
-              <li className="text-[16px] text-[#515151] font-poppins font-normal ">
-                {" "}
+              <li className="text-[14px] md:text-[16px] text-[#515151] font-poppins font-normal">
                 <Link href="/why-us">Blog</Link>
               </li>
-              <li className="text-[16px] text-[#515151] font-poppins font-normal ">
-                {" "}
+              <li className="text-[14px] md:text-[16px] text-[#515151] font-poppins font-normal">
                 <Link href="/why-us">Careers</Link>
               </li>
-              <li className="text-[16px] text-[#515151] font-poppins font-normal ">
-                {" "}
+              <li className="text-[14px] md:text-[16px] text-[#515151] font-poppins font-normal">
                 <Link href="/why-us">Our Work</Link>
               </li>
             </ul>
           </div>
-          <div className="col-span-4 flex flex-col gap-y-6">
-            <div className="text-[18px] text-[#000] font-poppins font-medium mt-4 mb-2">
+
+          {/* Contact Us Section */}
+          <div className="md:col-span-4 flex flex-col gap-y-6">
+            <div className="text-[16px] md:text-[18px] text-[#000] font-poppins font-medium">
               Contact Us
             </div>
-            <div className="text-[16px] text-[#515151] font-poppins leading-[28px]">
+            <div className="text-[14px] md:text-[16px] text-[#515151] font-poppins leading-[28px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </div>
-            <div>+908 89097 890</div>
+            <div className="text-[14px] md:text-[16px]">+908 89097 890</div>
           </div>
-          <div className="col-span-2 flex gap-x-2 items-end">
-          <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
-          <Linkedin />
+
+          {/* Social Icons Section */}
+          <div className="md:col-span-2 flex gap-4 justify-start items-end md:justify-end">
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
+              <Linkedin size={20} />
             </div>
-            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
-            <Facebook />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
+              <Facebook size={20} />
             </div>
-            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
-            {" "}
-              <Instagram />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
+              <Instagram size={20} />
             </div>
-            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
-            {" "}
-              <Twitter />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
+              <Twitter size={20} />
             </div>
           </div>
         </div>
       </div>
 
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-200 bg-white">
+      {/* Footer Bottom Section */}
+      <footer className="flex flex-col md:flex-row gap-2 md:gap-0 py-6 w-full shrink-0 items-center px-6 md:px-44 border-t border-gray-200 bg-white">
         <p className="text-xs text-gray-600">
           © 2024 Tech Consulting Partners. All rights reserved.
         </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+        <nav className="md:ml-auto flex gap-4">
           <Link
             className="text-xs text-gray-600 hover:text-logo-600 hover:underline underline-offset-4"
             href="#"

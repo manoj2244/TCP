@@ -24,7 +24,7 @@ const features = [
       "Extract insights from text data using advanced NLP techniques.",
     icon: MessageCircle,
     bgColor: "#EFEAFF",
-    color:"#4628A4"
+    color: "#4628A4",
   },
   {
     id: "computer-vision",
@@ -33,7 +33,7 @@ const features = [
       "Enhance visual data analysis with cutting-edge computer vision.",
     icon: Eye,
     bgColor: "#ECFFDA",
-    color:"#5FC300"
+    color: "#5FC300",
   },
   {
     id: "web-development",
@@ -41,8 +41,7 @@ const features = [
     description: "Create fast, secure, and responsive websites and apps.",
     icon: Globe,
     bgColor: "#FFE5DA",
-    color:"#BB3800"
-
+    color: "#BB3800",
   },
   {
     id: "automations",
@@ -51,8 +50,7 @@ const features = [
       "Streamline workflows and increase efficiency with smart automation.",
     icon: Zap,
     bgColor: "#EFEAFF",
-    color:"#4628A4"
-
+    color: "#4628A4",
   },
   {
     id: "recommendation-systems",
@@ -61,105 +59,139 @@ const features = [
       "Provide personalized recommendations with advanced algorithms.",
     icon: Star,
     bgColor: "#FFE5DA",
-    color:"#BB3800"
+    color: "#BB3800",
   },
 ];
 
 export default function LandingPage() {
   return (
-    <main className="flex-1">
-      <section
-        className="w-full h-[743px] py-4 md:py-6 lg:py-8 flex justify-around  relative"
-        style={{
-          backgroundImage: "url('/Rectangle 4.png')", // Make sure the path is correct
-          backgroundSize: "cover", // Optional: scales the image to cover the section
-          backgroundPosition: "center", // Optional: aligns the image in the center
-          backgroundRepeat: "no-repeat", // Optional: prevents the image from repeating
-        }}
-      >
-        <div className="absolute left-[-28px] top-[15%]  z-10 w-[80px] md:w-[100px">
-          <Image src="/left.png" width={100} height={100} alt="Before image" />
-        </div>
-        <div className="absolute top-[10%] right-[-0px]  z-10 ">
-          <Image src="/right.png" width={78} height={75} alt="After image" />
-        </div>
-        <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
-            {" "}
-            {/* lg:grid-cols-3 */}
-            <div className="flex flex-col justify-center space-y-4">
-              {" "}
-              {/*  col-span-2 */}
-              <div className="space-y-2">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-[#000] font-poppins">
-                  Revolutionize Your Business{" "}
-                  <span className="text-[#1090CB]">with AI</span>
-                </h1>
-                <p className="max-w-[600px] text-[#5C5C5C] md:text-xl leading-[32.69px] text-[16px] font-medium font-poppins !mt-2 !mb-4">
-                  Harness the power of Generative AI to transform your products,
-                  services, and customer experiences.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 ">
-                <Button className="bg-[#1090CB]   text-white font-poppins font-normal text-[16px] p-5">
-                  Get Started
-                </Button>
-                <Button
-                  variant="outline"
-                  className="text-[#1090CB] border-[#1090CB]  hover:text-[gray] p-5"
-                >
-                  <Link href="/services">View More</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="relative w-[500px] h-[500px]">
-              {/* Main background image */}
-              <Image
-                src="/main.png"
-                width={500}
-                height={500}
-                alt="Main image"
-                className="relative z-1"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    <main className="flex-1 overflow-hidden !bg-white">
+  <section
+  className="w-full h-[743px] py-4 md:py-6 lg:py-8 flex justify-around relative"
+  style={{
+    backgroundImage: "url('/Rectangle 4.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Left image */}
+  <div className="absolute top-[5%] left-[-15px] md:left-[-60px] z-[10] overflow-visible">
+    <div className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px]">
+      <Image
+        src="/left.png"
+        alt="Left decorative image"
+        width={50}
+        height={50}
+        className="w-full h-auto"
+      />
+    </div>
+  </div>
+
+  {/* Right image */}
+  <div className="absolute top-[5%] right-[-20px] z-10">
+    <div className="w-[40px] sm:w-[60px] md:w-[78px] lg:w-[100px]">
+      <Image
+        src="/right.png"
+        alt="Right decorative image"
+        width={50}
+        height={50}
+        className="w-full h-auto"
+      />
+    </div>
+  </div>
+
+  {/* Main Content */}
+{/* Main Content */}
+<div className="container px-4 md:px-6">
+  <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center">
+    {/* Text Section */}
+    <div className="flex flex-col justify-center space-y-4">
+      <div className="space-y-2">
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-[#000] font-poppins text-center lg:text-left">
+          Revolutionize Your Business{" "}
+          <span className="text-[#1090CB]">with AI</span>
+        </h1>
+        <p className="max-w-[600px] text-[#5C5C5C] md:text-xl leading-[32.69px] text-[16px] font-medium font-poppins text-center lg:text-left">
+          Harness the power of Generative AI to transform your products,
+          services, and customer experiences.
+        </p>
+      </div>
+
+      {/* Main Image - Only visible on small screens */}
+      <div className="relative w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:hidden mx-auto">
+        <Image
+          src="/main.png"
+          width={500}
+          height={500}
+          alt="Main image"
+          className="w-full h-full object-contain"
+        />
+      </div>
+
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <Button className="bg-[#1090CB] text-white font-poppins font-normal text-[16px] p-5">
+          Get Started
+        </Button>
+        <Button
+          variant="outline"
+          className="text-[#1090CB] border-[#1090CB] hover:text-[gray] p-5"
+        >
+          <Link href="/services">View More</Link>
+        </Button>
+      </div>
+    </div>
+
+    {/* Main Image - Visible on larger screens */}
+    <div className="relative hidden lg:block w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] mx-auto">
+      <Image
+        src="/main.png"
+        width={600}
+        height={600}
+        alt="Main image"
+        className="w-full h-full object-contain"
+      />
+    </div>
+  </div>
+</div>
+
+</section>
+
 
       <section
         id="features"
         className="w-full py-4 md:py-6 lg:py-8 flex justify-around bg-white"
       >
-        <div className="container px-4 md:px-6 mx-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature,index) => {
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => {
               const Icon = feature.icon;
               const bgColor = feature.bgColor;
               return (
-             
-
-                <div key={index} className="flex w-full gap-x-2 ">
+                <div
+                  key={index}
+                  className="flex flex-col sm:flex-row gap-x-4 items-center"
+                >
                   <div
-                    className={`w-[83px] h-[83px] !max-w-[100px] rounded-[20px] flex justify-center`}
+                    className={`w-16 h-16 sm:w-[83px] sm:h-[83px] rounded-lg flex justify-center items-center`}
                     style={{
                       backgroundColor: bgColor,
                     }}
                   >
                     <Icon
-                      className="flex justify-center items-center h-full w-[50px]  "
+                      className="h-8 w-8 sm:h-10 sm:w-10"
                       style={{
                         color: feature.color,
                       }}
                     />
                   </div>
-                  <div className="flex justify-center items-center">
-                    <div className="">
-                      <div className=" font-medium font-poppins text-[20px] leading-[35px] text-[#000000]">
-                        {feature.title}
-                      </div>
-                      <div className="text-[15px] leading-[26.56px] font-poppins font-normal text-[#969696] w-[350px]">
-                        {feature.description}
-                      </div>
+                  <div className="text-center sm:text-left">
+                    <div className="font-medium font-poppins text-lg sm:text-xl leading-6 text-[#000000]">
+                      {feature.title}
+                    </div>
+                    <div className="text-sm leading-5 font-poppins font-normal text-[#969696] max-w-full sm:max-w-[350px]">
+                      {feature.description}
                     </div>
                   </div>
                 </div>
@@ -168,14 +200,16 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
       <hr className="border-t-1 border-[#C7C7C7] my-4" />
-      <section className="flex justify-center items-center flex-col py-10">
-        <div className="text-[33px] font-poppins font-semibold">Lorem Ipsum is simply dummy text of the printing. </div>
-        <div className="text-[#868686] font-poppins font-normal  text-[18px]  w-[670px] text-center my-4">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
+      <section className="flex justify-center items-center flex-col py-10 px-4">
+        <div className="text-[24px] md:text-[30px]  font-poppins font-semibold text-center">
+          Lorem Ipsum is simply dummy text of the printing.
         </div>
-
-
+        <div className="text-[#868686] font-poppins font-normal text-sm md:text-[18px] leading-6 md:leading-8 w-full md:w-[670px] text-center mt-4">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry
+        </div>
       </section>
 
       {/* <section
@@ -206,13 +240,15 @@ export default function LandingPage() {
       </section> */}
 
       <section className="bg-white">
-        <MainContent/>
+        <MainContent />
       </section>
+      <hr className="border-t-1 border-[#C7C7C7] mt-12 !bg-white" />
+
       <section className="bg-white">
-<ViewMoreCard/>
+        <ViewMoreCard />
       </section>
       <section>
-        <NewsLetter/>
+        <NewsLetter />
       </section>
     </main>
   );

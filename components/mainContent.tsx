@@ -39,16 +39,16 @@ export const MainContent = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col gap-12 px-6 md:px-44">
+    <div className="w-full flex flex-col gap-12 px-4 md:px-[176px]">
       {Data.map((item, index) => (
         <div
           key={item.id}
           className={`flex flex-col ${
-            index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+            index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
           } justify-between items-center gap-8 w-full`}
         >
-          {/* Content 1: Text and Icon */}
-          <div className="flex flex-col gap-6 w-full md:w-1/2">
+          {/* Text and Icon Section */}
+          <div className="flex flex-col gap-6 w-full lg:w-1/2">
             {/* Icon and Headings */}
             <div className="flex items-center gap-4">
               <div
@@ -58,7 +58,7 @@ export const MainContent = () => {
                 <Image src={item.icon} width={30} height={30} alt="icon" />
               </div>
               <div>
-                <div className="font-medium text-[17px] font-poppins">
+                <div className="font-medium text-[16px] sm:text-[17px] font-poppins">
                   {item.upperheading}
                 </div>
                 <div className="text-[#868686] text-[14px] font-poppins">
@@ -68,35 +68,34 @@ export const MainContent = () => {
             </div>
 
             {/* Main Heading and Content */}
-            
             <div className="flex flex-col gap-4">
-              <div className="font-semibold text-[30px] text-gray-800 font-poppins">
+              <div className="font-semibold text-[24px] sm:text-[30px] text-gray-800 font-poppins">
                 {/* Split mainHeading and style first two words */}
-                {item.mainHeading.split(" ").map((word, index) => {
-                  if (index < 2) {
+                {item.mainHeading.split(" ").map((word, idx) => {
+                  if (idx < 2) {
                     return (
-                      <span key={index} className="text-logo-600 font-semibold">
+                      <span key={idx} className="text-logo-600 font-semibold">
                         {word}{" "}
                       </span>
                     );
                   }
-                  return <span key={index}>{word} </span>;
+                  return <span key={idx}>{word} </span>;
                 })}
               </div>
-              <div className="text-[17px] text-[#545454] font-poppins leading-[34.16px]">
+              <div className="text-[15px] sm:text-[17px] text-[#545454] font-poppins leading-[28px] sm:leading-[34px]">
                 {item.content}
               </div>
             </div>
           </div>
 
-          {/* Content 2: Image */}
-          <div className="w-full md:w-1/2 flex justify-center">
+          {/* Image Section */}
+          <div className="w-full lg:w-1/2 flex justify-center">
             <Image
               src={item.image}
               width={700}
               height={700}
               alt="mainImage"
-              className="rounded-lg shadow-md"
+              className="rounded-lg shadow-md max-w-full h-auto"
             />
           </div>
         </div>
